@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e" scale="1" border="0">
+    <diagram id="2W1XIZYTAqcSoZ86lCnH" name="Networking">
+        <mxGraphModel dx="2026" dy="2241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="14" value="OCI eu-franfurt-1" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;verticalAlign=top;align=left;spacingLeft=30;fillStyle=solid;shadow=0;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry y="-790" width="1110" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Production Tenancy&lt;/span&gt;" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;verticalAlign=top;align=left;spacingLeft=30;dashed=0;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="-760" width="450" height="750" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Operations Tenancy&lt;/span&gt;" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;verticalAlign=top;align=left;spacingLeft=30;dashed=0;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="-760" width="630" height="750" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="VCN 10.0.0.0/16" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;verticalAlign=top;align=left;spacingLeft=30;dashed=1;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="-730" width="610" height="710" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Public Subnet 10.0.0.0/17" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;verticalAlign=top;align=left;spacingLeft=30;dashed=1;fillStyle=auto;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-700" width="590" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Private Subnet 10.1.128.0/17" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;verticalAlign=top;align=left;spacingLeft=30;dashed=1;fillStyle=auto;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-390" width="590" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="VCN 10.1.0.0/16" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;verticalAlign=top;align=left;spacingLeft=30;dashed=1;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="-730" width="430" height="710" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Private Subnet 10.1.0.0/16" style="sketch=0;outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_subnet;verticalAlign=top;align=left;spacingLeft=30;dashed=1;fillStyle=auto;fillColor=#f5f5f5;fontColor=default;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="-430" width="410" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Private Security List&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress 10.0.0.51/32 -&amp;gt; TCP 22&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress 10.1.128.0/17 -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress ALL -&amp;gt; 0.0.0.0/0&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=-2;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacingLeft=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-360" width="570" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="NLB NSG Firewall&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress API GW NSG -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress Operations Private Subnet -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress Private VM NSG -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress Operations Private Subnet -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="67" vertex="1">
+                    <mxGeometry x="290" y="10" width="270" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="NAT&lt;div&gt;Gateway&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;strokeColor=light-dark(#FF0000,#FF9090);fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.nat_gateway;" parent="67" vertex="1">
+                    <mxGeometry x="240" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="MySQL NSG Firewall&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress VMs -&amp;gt; TCP 3306, 33060&lt;br&gt;Ingress FaaS -&amp;gt; TCP 3306, 33060&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="67" vertex="1">
+                    <mxGeometry x="10" y="220" width="270" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="MySQL&lt;div&gt;Heatwave&lt;/div&gt;" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_mysql_instance;fillColor=light-dark(#FF0000,#FF9090);fontColor=default;strokeColor=light-dark(#6D1F00,#FF9090);" parent="180" vertex="1">
+                    <mxGeometry x="210" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="Network Load Balancer" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#1192E8;fontColor=default;spacing=0;spacingLeft=45;" parent="67" vertex="1">
+                    <mxGeometry x="300" y="100" width="720" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="Private VM NSG Firewall&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress AREA51 -&amp;gt; TCP 22&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress Local NLB -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress DB NSG -&amp;gt; TCP 3306&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress DB NSG -&amp;gt; TCP 33060&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress Internet -&amp;gt; TCP 443&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress Internet -&amp;gt; TCP 80&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="162" vertex="1">
+                    <mxGeometry x="10" y="40" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="AREA52&lt;div&gt;AD2-FD2&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=light-dark(#FF0000,#FF9090);strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" parent="195" vertex="1">
+                    <mxGeometry x="190" y="30" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="" style="sketch=0;points=[[0.015,0.015,0],[0.985,0.015,0],[0.985,0.985,0],[0.015,0.985,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.rect;prIcon=load_balancer;fillColor=none;strokeColor=#1192E8;fontColor=default;" parent="162" vertex="1">
+                    <mxGeometry width="38.4" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="Public Security List&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress ALL -&amp;gt; 0.0.0.0/0&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-670" width="570" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Internet&lt;br&gt;Gateway" style="sketch=0;outlineConnect=0;fontColor=default;strokeColor=light-dark(#FF0000,#FF9090);fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet_gateway;" parent="66" vertex="1">
+                    <mxGeometry x="520" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="API GW NSG Firewall&lt;div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Ingress 0.0.0.0/0 -&amp;gt; TCP 443&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Egress TCP 8700 -&amp;gt; NLB NSG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Egress TCP 443 -&amp;gt; FaaS NSG&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="66" vertex="1">
+                    <mxGeometry x="290" y="100" width="270" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="API&lt;div&gt;Gateway&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;fillColor=none;fontColor=default;strokeColor=light-dark(#FF0000,#FF9090);" parent="173" vertex="1">
+                    <mxGeometry x="210" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="Jumpbox NSG Firewall&lt;div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Ingress 0.0.0.0/0 -&amp;gt; TCP 443&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Ingress API GW NSG -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Egress TCP 22 -&amp;gt; 10.0.0.0/16&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Egress TCP 22 -&amp;gt; 10.1.0.0/16&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(75, 75, 75) rgb(27, 29, 30); font-weight: normal;&quot;&gt;Egress ALL -&amp;gt; 0.0.0.0/0&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="66" vertex="1">
+                    <mxGeometry x="10" y="100" width="270" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="AREA51&lt;div&gt;AD1-FD1&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=light-dark(#FF0000,#FF9090);strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" parent="226" vertex="1">
+                    <mxGeometry x="210" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Private Security List&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress 10.1.128.0/17 -&amp;gt; TCP 8700&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress ALL -&amp;gt; 0.0.0.0/0&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=-2;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacingLeft=6;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="-400" width="390" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="NAT&lt;div&gt;Gateway&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;strokeColor=light-dark(#FF0000,#FF9090);fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.nat_gateway;" parent="69" vertex="1">
+                    <mxGeometry x="340" y="10" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="VM NSG Firewall&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Ingress AREA51 -&amp;gt; TCP 22&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Egress to Operations Private Subnet 10.0.128.0/17 -&amp;gt; TCP 3306&lt;/span&gt;&lt;/div&gt;" style="fontStyle=1;verticalAlign=top;align=left;spacingTop=0;rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;dashed=1;container=1;collapsible=0;expand=0;recursiveResize=0;fillColor=none;strokeColor=#A0522D;fontColor=default;spacing=0;spacingLeft=6;" parent="69" vertex="1">
+                    <mxGeometry x="10" y="150" width="360" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="AREA53&lt;div&gt;AD3-FD3&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=light-dark(#FF0000,#FF9090);strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" parent="196" vertex="1">
+                    <mxGeometry x="80" y="100" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="AREA54&lt;div&gt;AD1-FD1&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=default;gradientColor=none;fillColor=light-dark(#FF0000,#FF9090);strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" parent="196" vertex="1">
+                    <mxGeometry x="195" y="100" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.oracle;fillColor=#FF0000;strokeColor=none;fontStyle=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="805" y="-790" width="90" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;startArrow=classic;html=1;fontColor=default;strokeColor=#666666;fontSize=12;fillColor=#f5f5f5;fontStyle=1" parent="1" source="50" target="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="830" y="-380" as="sourcePoint"/>
+                        <mxPoint x="890" y="-390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="&lt;span&gt;Peering&lt;/span&gt;&lt;div&gt;&lt;span&gt;Gateway&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];fontSize=12;fontColor=default;fontStyle=1" parent="28" vertex="1" connectable="0">
+                    <mxGeometry x="0.1556" y="1" relative="1" as="geometry">
+                        <mxPoint x="-6" y="-4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

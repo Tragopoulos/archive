@@ -1,0 +1,40 @@
+name: "MS_MAILER_DB"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "services/mailer/db/mailer.sql"
+
+jobs:
+  deploy:
+    runs-on: oracle
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Validate schema file
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f services/mailer/db/mailer.sql || { echo "Missing services/mailer/db/mailer.sql"; exit 1; }
+          echo "Schema file found"
+
+      - name: Apply schema to emails database
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          command -v mysqlsh >/dev/null 2>&1 || { echo "mysqlsh not found"; exit 1; }
+
+          MYSQL_PWD=$(jq -r '.mysql_password' /etc/mailer/config.json)
+
+          echo "Applying schema to emails database..."
+          MYSQLSH_PASSWORD="$MYSQL_PWD" mysqlsh service@10.0.200.50 --sql --file=services/mailer/db/mailer.sql
+
+          echo "Schema applied successfully"

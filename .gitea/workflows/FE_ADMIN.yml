@@ -1,0 +1,46 @@
+name: "FE_ADMIN_PROD"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "clients/admin/**"
+
+jobs:
+  deploy:
+    runs-on: oracle
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: clients/admin
+
+    env:
+      DEPLOY_DIR: /var/www/admin
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web (Expo)
+        run: npx expo export --platform web
+
+      - name: Sync build to web root
+        run: |
+          sudo mkdir -p "$DEPLOY_DIR"
+          sudo find "$DEPLOY_DIR" -mindepth 1 -delete
+          sudo cp -rT dist "$DEPLOY_DIR"
+          NGINX_USER=$(ps -o user= -C nginx | grep -v '^root$' | head -n1)
+          NGINX_USER=${NGINX_USER:-nginx}
+          sudo chown -R "$NGINX_USER:$NGINX_USER" "$DEPLOY_DIR"
+          sudo restorecon -Rv "$DEPLOY_DIR"
+
+      - name: Reload nginx
+        run: sudo systemctl reload nginx

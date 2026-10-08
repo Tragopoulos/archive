@@ -1,0 +1,115 @@
+name: "MS_ADMIN"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "services/admin/**"
+      - "!services/admin/db/admin.sql"
+
+env:
+  BINARY_NAME: ADMIN
+  INSTALL_PATH: /usr/local/bin/ADMIN
+  SERVICE_NAME: ADMIN
+
+jobs:
+  deploy:
+    runs-on: oracle
+    env:
+      PATH: /usr/local/go/bin:/usr/local/bin:/usr/bin:/bin
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Verify module consistency
+        working-directory: services/admin
+        run: |
+          go mod tidy
+          if ! git diff --exit-code -- go.mod go.sum; then
+            echo "::error::go.mod/go.sum are out of sync with the code. Run 'go mod tidy' locally and commit the changes."
+            exit 1
+          fi
+          go mod vendor
+
+      - name: Vet
+        working-directory: services/admin
+        run: go vet ./...
+
+      - name: Build
+        working-directory: services/admin
+        run: |
+          GOARCH=arm64 GOOS=linux go build -mod=vendor -o "$BINARY_NAME" .
+
+      - name: Install service unit (if missing)
+        run: |
+          SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
+          if [ ! -f "$SERVICE_FILE" ]; then
+            echo "Service file not found, installing..."
+            printf '%s\n' \
+              '[Unit]' \
+              'Description=Admin Service' \
+              'After=network.target' \
+              '' \
+              '[Service]' \
+              'Type=simple' \
+              'User=opc' \
+              'WorkingDirectory=/home/opc' \
+              "ExecStart=${INSTALL_PATH}" \
+              'Restart=always' \
+              'RestartSec=5' \
+              '' \
+              '[Install]' \
+              'WantedBy=multi-user.target' \
+              | sudo tee "$SERVICE_FILE" > /dev/null
+            sudo systemctl daemon-reload
+            sudo systemctl enable "$SERVICE_NAME"
+          fi
+
+      - name: Backup current binary
+        run: |
+          if [ -f "$INSTALL_PATH" ]; then
+            sudo cp "$INSTALL_PATH" "${INSTALL_PATH}.bak"
+          fi
+
+      - name: Swap binary
+        run: |
+          sudo mv "services/admin/${BINARY_NAME}" "$INSTALL_PATH"
+          sudo chmod +x "$INSTALL_PATH"
+          sudo restorecon -v "$INSTALL_PATH"
+
+      - name: Restart service
+        run: sudo systemctl restart "$SERVICE_NAME"
+
+      - name: Health check
+        run: |
+          for i in $(seq 1 10); do
+            if sudo systemctl is-active --quiet "$SERVICE_NAME"; then
+              echo "Service is active."
+              exit 0
+            fi
+            echo "Waiting for ${SERVICE_NAME} to become active... ($i/10)"
+            sleep 2
+          done
+          echo "::error::Service did not become active in time."
+          sudo systemctl status "$SERVICE_NAME" --no-pager
+          echo "--- Recent logs ---"
+          sudo journalctl -u "$SERVICE_NAME" -n 30 --no-pager
+          exit 1
+
+      - name: Rollback on failure
+        if: failure()
+        run: |
+          if [ -f "${INSTALL_PATH}.bak" ]; then
+            echo "Rolling back to previous binary..."
+            sudo mv "${INSTALL_PATH}.bak" "$INSTALL_PATH"
+            sudo chmod +x "$INSTALL_PATH"
+            sudo restorecon -v "$INSTALL_PATH"
+            sudo systemctl restart "$SERVICE_NAME"
+          else
+            echo "No backup binary found, nothing to roll back to."
+          fi

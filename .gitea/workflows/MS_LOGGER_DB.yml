@@ -1,0 +1,40 @@
+name: "MS_LOGGER_DB"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "services/logger/db/logger.sql"
+
+jobs:
+  deploy:
+    runs-on: oracle
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Validate schema file
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f services/logger/db/logger.sql || { echo "Missing services/logger/db/logger.sql"; exit 1; }
+          echo "Schema file found"
+
+      - name: Apply schema to logger database
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          command -v mysqlsh >/dev/null 2>&1 || { echo "mysqlsh not found"; exit 1; }
+
+          MYSQL_PWD=$(jq -r '.mysql_password' /etc/logger/config.json)
+
+          echo "Applying schema to logger database..."
+          MYSQLSH_PASSWORD="$MYSQL_PWD" mysqlsh service@10.0.200.50 --sql --file=services/logger/db/logger.sql
+
+          echo "Schema applied successfully"
