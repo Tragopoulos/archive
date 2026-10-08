@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="70 12 400 96"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="C:\Users\ftragopoulos\Downloads\logo.png"
+   inkscape:export-xdpi="245.75999"
+   inkscape:export-ydpi="245.75999"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="4.5475"
+     inkscape:cx="200.10995"
+     inkscape:cy="48.048378"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <defs
+     id="defs3">
+    <linearGradient
+       id="accentGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#FFA94D"
+         stop-opacity="0"
+         id="stop1" />
+      <stop
+         offset="60%"
+         stop-color="#FFA94D"
+         stop-opacity="0.25"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#FFA94D"
+         stop-opacity="0.4"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <g
+     transform="translate(120, 60)"
+     fill="none"
+     stroke="#FFA94D"
+     stroke-linecap="round"
+     id="g5">
+    <circle
+       cx="0"
+       cy="0"
+       r="34"
+       stroke-opacity="0.30"
+       stroke-width="1"
+       id="circle3" />
+    <circle
+       cx="0"
+       cy="0"
+       r="42"
+       stroke-opacity="0.18"
+       stroke-width="1"
+       id="circle4" />
+    <path
+       d="M -34 0 A 34 34 0 0 1 22 -26"
+       stroke-width="2.5"
+       id="path4" />
+    <circle
+       cx="22"
+       cy="-26"
+       r="4"
+       fill="#FFD68A"
+       stroke="none"
+       id="circle5" />
+  </g>
+  <rect
+     x="120"
+     y="62"
+     width="320"
+     height="3"
+     rx="1.5"
+     fill="url(#accentGradient)"
+     id="rect5" />
+  <circle
+     cx="452"
+     cy="30"
+     r="4.5"
+     fill="#FFD68A"
+     id="circle6" />
+  <text
+     x="270"
+     y="60"
+     fill="#FFA94D"
+     font-family="IBMPlexSans, 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+     font-size="60"
+     font-weight="900"
+     letter-spacing="-1"
+     text-anchor="middle"
+     dominant-baseline="central"
+     id="text6">operations</text>
+</svg>
