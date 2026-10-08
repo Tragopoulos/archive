@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncroPet Themes</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+
+    .dark_square {
+      height: 40px;
+      padding: 20px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .light_square {
+      height: 40px;
+      padding: 20px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 50px;
+      left: 50%;
+      min-width: 200px;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="column">
+      <p class="title">Standard Colors</p>
+      <div class="dark_square" style="background-color: #000000;" onclick="copyToClipboard(this, '#000000')">
+        #000000 black
+        <span class="tooltip">#000000 copied!</span>
+      </div>
+      <div class="light_square" style="background-color: #ffffff;" onclick="copyToClipboard(this, '#999999')">
+        #999999 white
+        <span class="tooltip">#999999 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #3FA6DA;" onclick="copyToClipboard(this, '#3FA6DA')">
+        #3FA6DA logoBlue
+        <span class="tooltip">#3FA6DA copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #A8967E;" onclick="copyToClipboard(this, '#A8967E')">
+        #A8967E logoBrown
+        <span class="tooltip">#A8967E copied!</span>
+      </div>
+    </div>
+    <div class="column">
+      <p class="title">Light Theme</p>
+      <div class="light_square" style="background-color: #F6F7F9;" onclick="copyToClipboard(this, '#F6F7F9')">
+        #F6F7F9 clear
+        <span class="tooltip">#F6F7F9 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #1A1A1A;" onclick="copyToClipboard(this, '#1A1A1A')">
+        #1A1A1A invert
+        <span class="tooltip">#1A1A1A copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #252A31;" onclick="copyToClipboard(this, '#252A31')">
+        #252A31 primary
+        <span class="tooltip">#252A31 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #5F6B7C;" onclick="copyToClipboard(this, '#5F6B7C')">
+        #5F6B7C secondary
+        <span class="tooltip">#5F6B7C copied!</span>
+      </div>
+      <div class="light_square" style="background-color: #F2F2F2;" onclick="copyToClipboard(this, '#F2F2F2')">
+        #F2F2F2 ternary
+        <span class="tooltip">#919191 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #0F6894;" onclick="copyToClipboard(this, '#0F6894')">
+        #0F6894 primaryBlue
+        <span class="tooltip">#0F6894 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #147EB3;" onclick="copyToClipboard(this, '#147EB3')">
+        #147EB3 secondaryBlue
+        <span class="tooltip">#147EB3 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #3FA6DA;" onclick="copyToClipboard(this, '#3FA6DA')">
+        #3FA6DA ternaryBlue
+        <span class="tooltip">#3FA6DA copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #AC2F33;" onclick="copyToClipboard(this, '#AC2F33')">
+        #AC2F33 primaryRed
+        <span class="tooltip">#AC2F33 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #CD4246;" onclick="copyToClipboard(this, '#CD4246')">
+        #CD4246 secondaryRed
+        <span class="tooltip">#CD4246 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #E76A6E;" onclick="copyToClipboard(this, '#E76A6E')">
+        #E76A6E ternaryRed
+        <span class="tooltip">#E76A6E copied!</span>
+      </div>
+    </div>
+    <div class="column">
+      <p class="title">Dark Theme</p>
+      <div class="dark_square" style="background-color: #1A1A1A;" onclick="copyToClipboard(this, '#1A1A1A')">
+        #1A1A1A clear
+        <span class="tooltip">#1A1A1A copied!</span>
+      </div>
+      <div class="light_square" style="background-color: #F6F7F9;" onclick="copyToClipboard(this, '#F6F7F9')">
+        #F6F7F9 invert
+        <span class="tooltip">#F6F7F9 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #919191;" onclick="copyToClipboard(this, '#919191')">
+        #919191 primary
+        <span class="tooltip">#919191 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #5F6B7C;" onclick="copyToClipboard(this, '#5F6B7C')">
+        #5F6B7C secondary
+        <span class="tooltip">#5F6B7C copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #252A31;" onclick="copyToClipboard(this, '#252A31')">
+        #252A31 ternary
+        <span class="tooltip">#252A31 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #3FA6DA;" onclick="copyToClipboard(this, '#3FA6DA')">
+        #3FA6DA primaryBlue
+        <span class="tooltip">#3FA6DA copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #147EB3;" onclick="copyToClipboard(this, '#147EB3')">
+        #147EB3 secondaryBlue
+        <span class="tooltip">#147EB3 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #0F6894;" onclick="copyToClipboard(this, '#0F6894')">
+        #0F6894 ternaryBlue
+        <span class="tooltip">#0F6894 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #E76A6E;" onclick="copyToClipboard(this, '#E76A6E')">
+        #E76A6E primaryRed
+        <span class="tooltip">#E76A6E copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #CD4246;" onclick="copyToClipboard(this, '#CD4246')">
+        #CD4246 secondaryRed
+        <span class="tooltip">#CD4246 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #AC2F33;" onclick="copyToClipboard(this, '#AC2F33')">
+        #AC2F33 ternaryRed
+        <span class="tooltip">#AC2F33 copied!</span>
+      </div>
+    </div>
+    <div class="column">
+      <p class="title">Monochrome Dark Theme</p>
+      <div class="dark_square" style="background-color: #1A1A1A;" onclick="copyToClipboard(this, '#1A1A1A')">
+        #1A1A1A clear
+        <span class="tooltip">#1A1A1A copied!</span>
+      </div>
+      <div class="light_square" style="background-color: #F6F7F9;" onclick="copyToClipboard(this, '#F6F7F9')">
+        #F6F7F9 invert
+        <span class="tooltip">#F6F7F9 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #919191;" onclick="copyToClipboard(this, '#919191')">
+        #919191 primary
+        <span class="tooltip">#919191 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #5F6B7C;" onclick="copyToClipboard(this, '#5F6B7C')">
+        #5F6B7C secondary
+        <span class="tooltip">#5F6B7C copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #252A31;" onclick="copyToClipboard(this, '#252A31')">
+        #252A31 ternary
+        <span class="tooltip">#252A31 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #3FA6DA;" onclick="copyToClipboard(this, '#3FA6DA')">
+        #3FA6DA primaryBlue
+        <span class="tooltip">#3FA6DA copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #252A31;" onclick="copyToClipboard(this, '#252A31')">
+        #252A31 secondaryBlue
+        <span class="tooltip">#252A31 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #0F6894;" onclick="copyToClipboard(this, '#0F6894')">
+        #0F6894 ternaryBlue
+        <span class="tooltip">#0F6894 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #E76A6E;" onclick="copyToClipboard(this, '#E76A6E')">
+        #E76A6E primaryRed
+        <span class="tooltip">#E76A6E copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #252A31;" onclick="copyToClipboard(this, '#252A31')">
+        #252A31 secondaryRed
+        <span class="tooltip">#252A31 copied!</span>
+      </div>
+      <div class="dark_square" style="background-color: #AC2F33;" onclick="copyToClipboard(this, '#AC2F33')">
+        #AC2F33 ternaryRed
+        <span class="tooltip">#AC2F33 copied!</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(element, value) {
+      const tempInput = document.createElement('input');
+      tempInput.value = value;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      // Show tooltip
+      const tooltip = element.querySelector('.tooltip');
+      tooltip.textContent = `${value} copied!`;
+      tooltip.style.visibility = 'visible';
+      tooltip.style.opacity = '1';
+      // Hide tooltip after 2 seconds
+      setTimeout(() => {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+      }, 2000);
+    }
+  </script>
+</body>
+
+</html>

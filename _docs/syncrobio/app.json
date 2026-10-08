@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "SyncroBio",
+    "slug": "syncrobio",
+    "description": "SyncroBio Application",
+    "scheme": "syncrobio",
+    "version": "1.0.0",
+    "githubUrl": "https://github.com/Tragopoulos/syncrobio",
+    "owner": "tragopoulos",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "extra": {
+      "eas": {
+        "projectId": "741cf65c-c7b3-4c51-9ab4-8f977f2f39f1"
+      }
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.syncrobio"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.tragopoulos.syncrobio"
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+name: "GITEA_RELEASE_DEPLOY"
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag (e.g. v0.0.1-alpha)"
+        required: true
+
+jobs:
+  deploy:
+    runs-on: host
+
+    steps:
+      - name: Download release assets (schema.sql, gateway.json, syncrosocial_api)
+        shell: bash
+        env:
+          REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          command -v curl >/dev/null 2>&1 || { echo "curl not found on runner"; exit 1; }
+          command -v jq >/dev/null 2>&1 || { echo "jq not found on runner"; exit 1; }
+
+          TAG="${{ github.event.inputs.release_tag }}"
+          test -n "${TAG}" || { echo "Missing input release_tag"; exit 1; }
+
+          BASE_URL="https://git.tragopoulos.com"
+          REPO="${GITHUB_REPOSITORY:-tragopoulos/operations}"
+
+          if [ -z "${REPO_ACCESS_TOKEN:-}" ]; then
+            echo "Missing secret REPO_ACCESS_TOKEN"
+            exit 1
+          fi
+
+          api() {
+            local method="$1"; shift
+            local path="$1"; shift
+            curl -fsS -X "${method}" \
+              -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+              -H "Content-Type: application/json" \
+              "${BASE_URL%/}/api/v1${path}" \
+              "$@"
+          }
+
+          echo "Resolving release assets for ${REPO} tag ${TAG}"
+          RELEASE_JSON=$(api GET "/repos/${REPO}/releases/tags/${TAG}")
+
+          download_asset() {
+            local name="$1"
+            local out="$2"
+            local url
+
+            url=$(echo "${RELEASE_JSON}" | jq -r --arg n "${name}" '.assets[]? | select(.name==$n) | (.browser_download_url // .download_url // empty)' | head -n1)
+            if [ -z "${url}" ] || [ "${url}" = "null" ]; then
+              echo "Missing asset in release: ${name}"
+              exit 1
+            fi
+
+            echo "Downloading ${name} -> ${out}"
+            curl -fsSL \
+              -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+              -o "${out}" \
+              "${url}"
+          }
+
+          rm -f /tmp/schema.sql /tmp/gateway.json /tmp/syncrosocial_api
+          download_asset "schema.sql" "/tmp/schema.sql"
+          download_asset "gateway.json" "/tmp/gateway.json"
+          download_asset "syncrosocial_api" "/tmp/syncrosocial_api"
+
+          chmod +x /tmp/syncrosocial_api
+
+      - name: Prod DB - Apply
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          command -v cockroach >/dev/null 2>&1 || { echo "cockroach CLI not found"; exit 1; }
+
+          test -f /tmp/schema.sql || { echo "Missing /tmp/schema.sql"; exit 1; }
+
+          test -d /home/opc/cockroach-certs || { echo "Missing certificate directory"; exit 1; }
+
+          echo "Applying schema to PRODUCTION database..."
+          cockroach sql --certs-dir=/home/opc/cockroach-certs --host=10.0.178.227:26257 < /tmp/schema.sql
+
+          echo "Schema applied successfully to PRODUCTION"
+
+      - name: Prod GW - Deploy (from release gateway.json)
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v oci >/dev/null 2>&1 || { echo "oci CLI not found on runner PATH"; exit 1; }
+          test -f /tmp/gateway.json || { echo "Missing /tmp/gateway.json"; exit 1; }
+
+          OCI_CONFIG_FILE=./oci_temp/config
+
+          mkdir -p ./oci_temp
+          cat <<EOF > ./oci_temp/config
+          [DEFAULT]
+          user=${{ secrets.PROD_USER_OCID }}
+          fingerprint=${{ secrets.PROD_FINGERPRINT }}
+          region=${{ secrets.OPS_REGION }}
+          tenancy=${{ secrets.PROD_TENANCY_OCID }}
+          key_file=$(pwd)/oci_temp/key.pem
+          EOF
+
+          echo "${{ secrets.OPS_KEY_FILE }}" > ./oci_temp/key.pem
+          chmod 600 ./oci_temp/config ./oci_temp/key.pem
+
+          existing_deployment=$(oci api-gateway deployment list \
+            --config-file ./oci_temp/config \
+            --compartment-id "${{ secrets.PROD_COMPARTMENT }}" \
+            --gateway-id "${{ secrets.PROD_API_GW }}" \
+            --lifecycle-state ACTIVE \
+            --display-name "PRODUCTION" \
+            --query 'data.items[0].id' \
+            --raw-output 2>/dev/null)
+
+          if [ -z "$existing_deployment" ]; then
+            echo "Deployment not found. Creating..."
+            WORK_REQUEST_ID=$(oci api-gateway deployment create \
+              --config-file ./oci_temp/config \
+              --compartment-id ${{ secrets.PROD_COMPARTMENT }} \
+              --display-name "PRODUCTION" \
+              --gateway-id ${{ secrets.PROD_API_GW }} \
+              --path-prefix "/v1" \
+              --specification file:///tmp/gateway.json \
+              --query '"opc-work-request-id"' --raw-output)
+          else
+            echo "Updating existing deployment: $existing_deployment"
+            WORK_REQUEST_ID=$(oci api-gateway deployment update \
+              --config-file ./oci_temp/config \
+              --deployment-id $existing_deployment \
+              --specification file:///tmp/gateway.json --force \
+              --query '"opc-work-request-id"' --raw-output)
+          fi
+
+          if [ -z "${WORK_REQUEST_ID:-}" ] || [ "${WORK_REQUEST_ID}" = "null" ]; then
+            echo "No work-request id returned; continuing"
+            exit 0
+          fi
+
+          echo "Waiting for work request: ${WORK_REQUEST_ID}"
+          end=$((SECONDS+900))
+          while true; do
+            status=$(oci api-gateway work-request get --config-file $OCI_CONFIG_FILE --work-request-id "${WORK_REQUEST_ID}" --query 'data.status' --raw-output 2>/dev/null || true)
+            echo "Work request status: ${status:-unknown}"
+
+            case "${status}" in
+              SUCCEEDED)
+                echo "Gateway deployment completed successfully"
+                break
+                ;;
+              FAILED|CANCELED)
+                echo "Gateway deployment failed: ${status}"
+                oci api-gateway work-request get --config-file $OCI_CONFIG_FILE --work-request-id "${WORK_REQUEST_ID}" || true
+                exit 1
+                ;;
+            esac
+
+            if [ "$SECONDS" -ge "$end" ]; then
+              echo "Timed out waiting for gateway deployment work request"
+              oci api-gateway work-request get --config-file $OCI_CONFIG_FILE --work-request-id "${WORK_REQUEST_ID}" || true
+              exit 1
+            fi
+
+            sleep 10
+          done
+
+      - name: Prod BE - Deploy (from release syncrosocial_api)
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v ssh >/dev/null 2>&1 || { echo "ssh not found on runner"; exit 1; }
+          command -v scp >/dev/null 2>&1 || { echo "scp not found on runner"; exit 1; }
+          test -f /tmp/syncrosocial_api || { echo "Missing /tmp/syncrosocial_api"; exit 1; }
+
+          SSH_USER="opc"
+          PROD_VMS="AREA52 AREA53 AREA54"
+          SERVICE_NAME="SYNCROSOCIAL_API"
+
+          for HOST in $PROD_VMS; do
+            echo "--- Updating $HOST ---"
+            scp /tmp/syncrosocial_api "$SSH_USER@$HOST:/tmp/SYNCROSOCIAL_API.new"
+            ssh "$SSH_USER@$HOST" "
+              sudo mv /tmp/SYNCROSOCIAL_API.new /usr/local/bin/SYNCROSOCIAL_API
+              sudo chmod +x /usr/local/bin/SYNCROSOCIAL_API
+              sudo restorecon -v /usr/local/bin/SYNCROSOCIAL_API
+              sudo systemctl restart $SERVICE_NAME
+            "
+          done
+
+      - name: Prod BE - Verify cluster status
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROD_VMS="AREA52 AREA53 AREA54"
+          SERVICE_NAME="SYNCROSOCIAL_API"
+
+          echo "Waiting for services to stabilize..."
+          sleep 10
+
+          FAILED_HOSTS=""
+          for HOST in $PROD_VMS; do
+            echo "--- Checking $HOST ---"
+            if ssh opc@$HOST "sudo systemctl is-active --quiet $SERVICE_NAME"; then
+              echo "[OK] $HOST: Service is running"
+              ssh opc@$HOST "sudo systemctl status $SERVICE_NAME --no-pager | head -15"
+            else
+              echo "[FAILED] $HOST: Service failed to start"
+              ssh opc@$HOST "sudo systemctl status $SERVICE_NAME --no-pager"
+              echo "--- Recent logs for $HOST ---"
+              ssh opc@$HOST "sudo journalctl -u $SERVICE_NAME -n 50 --no-pager"
+              FAILED_HOSTS="$FAILED_HOSTS $HOST"
+            fi
+            echo ""
+          done
+
+          if [ -n "$FAILED_HOSTS" ]; then
+            echo "Deployment failed on:$FAILED_HOSTS"
+            exit 1
+          fi
+
+          echo "All hosts verified successfully"
+
+      - name: Prod FE - Promote live site
+        shell: bash
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          set -euo pipefail
+          command -v firebase >/dev/null 2>&1 || { echo "firebase not found on runner PATH"; exit 1; }
+
+          echo "$FIREBASE_SERVICE_ACCOUNT" > firebase_key.json
+          export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/firebase_key.json
+          firebase hosting:clone syncrosocialprod:live syncrosocial:live --project syncrosocialprod
+          rm -f firebase_key.json
+
+      - name: Cleanup
+        if: always()
+        shell: bash
+        run: |
+          rm -rf ./oci_temp
+          rm -f /tmp/schema.sql /tmp/gateway.json /tmp/syncrosocial_api

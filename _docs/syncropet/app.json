@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "SyncroPet",
+    "description": "SyncroPet Application",
+    "githubUrl": "https://github.com/Tragopoulos/syncropet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "syncropet",
+    "icon": "./assets/images/icon.png",
+    "owner": "tragopoulos",
+    "slug": "syncropet",
+    "extra": {
+      "eas": {
+        "projectId": "377da7c8-650c-4c42-bb01-bff1c199faaa"
+      }
+    },
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "contentFit": "cover",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.syncropet"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.tragopoulos.syncropet"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow SyncroPet to access your photos.",
+          "cameraPermission": "Allow SyncroPet to access your camera."
+        }
+      ]
+    ]
+  }
+}

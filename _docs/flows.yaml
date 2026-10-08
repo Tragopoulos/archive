@@ -1,0 +1,49 @@
+name: (Ops) Flows
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - prod
+    paths:
+      - "operations_flows/**"
+
+jobs:
+  deploy-flows:
+    runs-on: self-hosted
+    env:
+      GOCACHE: /home/opc/builds/.cache/go
+      GOPATH: /home/opc/builds/go
+      XDG_CACHE_HOME: /home/opc/builds/.cache
+      XDG_CONFIG_HOME: /home/opc/builds/.config
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare build folder
+        run: |
+          mkdir -p /home/opc/builds
+
+      - name: Build flows binary
+        run: |
+          cd operations_flows
+          go mod tidy
+          go mod vendor
+          go build -o flows .
+          ls -l
+
+      - name: Move binary to apps folder
+        run: |
+          mkdir -p /home/opc/apps
+          mv operations_flows/flows /home/opc/apps/
+          chmod +x /home/opc/apps/flows
+          ls -l /home/opc/apps/
+
+      - name: Confirm deployment
+        run: ls -l /home/opc/apps/
+
+      - name: Clean Go cache
+        run: |
+          go clean -modcache
+          sudo rm -rf /home/opc/builds

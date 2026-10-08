@@ -1,0 +1,37 @@
+name: "SYNCROINSPECT_TEST"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - prod
+    paths:
+      - "clients/syncroinspect/**"
+
+jobs:
+  deploy_dev:
+    runs-on: host
+
+    defaults:
+      run:
+        working-directory: clients/syncroinspect
+        shell: bash
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web (Expo)
+        run: npx expo export --platform web
+
+      - name: Deploy to Cloudflare Preview
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy dist --project-name=syncrosocial --branch=preview-test

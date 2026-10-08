@@ -1,0 +1,67 @@
+name: "MS_API_TEST"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "services/api/**"
+      - "!services/api/configs/**"
+
+jobs:
+  deploy:
+    runs-on: host
+    defaults:
+      run:
+        working-directory: services/api
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build and Install API
+        run: |
+          BINARY_NAME="API"
+          INSTALL_PATH="/usr/local/bin/${BINARY_NAME}"
+
+          echo "--- Building API binary ---"
+          go mod tidy
+          go mod vendor
+          GOARCH=arm64 GOOS=linux go build -mod=vendor -o "$BINARY_NAME" .
+
+          echo "--- Swapping binary ---"
+          sudo mv "$BINARY_NAME" "$INSTALL_PATH"
+          sudo chmod +x "$INSTALL_PATH"
+          sudo semanage fcontext -a -t bin_t "$INSTALL_PATH" 2>/dev/null || sudo semanage fcontext -m -t bin_t "$INSTALL_PATH"
+          sudo restorecon -v "$INSTALL_PATH"
+
+          echo "--- Restarting service ---"
+          SERVICE_FILE="/etc/systemd/system/API.service"
+          if [ ! -f "$SERVICE_FILE" ]; then
+            echo "Service file not found, installing..."
+            printf '%s\n' \
+              '[Unit]' \
+              'Description=API Test Service' \
+              'After=network.target' \
+              '' \
+              '[Service]' \
+              'Type=simple' \
+              'User=opc' \
+              'WorkingDirectory=/usr/local/bin' \
+              'ExecStart=/usr/local/bin/API' \
+              'Restart=always' \
+              'RestartSec=5' \
+              '' \
+              '[Install]' \
+              'WantedBy=multi-user.target' \
+              | sudo tee "$SERVICE_FILE" > /dev/null
+            sudo systemctl daemon-reload
+            sudo systemctl enable API
+          fi
+          sudo systemctl restart API
+
+      - name: Verify Service Status
+        run: sudo systemctl status API --no-pager

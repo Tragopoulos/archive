@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+
+# Vscode
+.vscode
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+**.DS_Store
+**.pem
+**._*
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+#firebase
+.firebaserc
+firebase.json

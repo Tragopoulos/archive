@@ -1,0 +1,102 @@
+name: (Prod) Function
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - prod
+    paths:
+      - "production_fn_route/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      OCI_CLI_USER: ${{ secrets.PROD_USER_OCID }}
+      OCI_CLI_TENANCY: ${{ secrets.PROD_TENANCY_OCID }}
+      OCI_CLI_FINGERPRINT: ${{ secrets.PROD_FINGERPRINT }}
+      OCI_CLI_KEY_CONTENT: ${{ secrets.OPS_KEY_FILE }}
+      OCI_CLI_REGION: ${{secrets.OPS_REGION}}
+      OCI_CLI_REGION_SHORT: ${{secrets.PROD_REGION_SHORT}}
+      OCI_NAMESPACE: ${{ secrets.PROD_NAMESPACE }}
+      FN_APP: ${{ vars.PROD_NAME }}
+      FN_FUNCTION: fn_route
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write OCI config & key
+        run: |
+          mkdir -p ~/.oci
+          cat <<EOF > ~/.oci/config
+          [DEFAULT]
+          user=${{ env.OCI_CLI_USER }}
+          fingerprint=${{ env.OCI_CLI_FINGERPRINT }}
+          region=${{ env.OCI_CLI_REGION }}
+          tenancy=${{ env.OCI_CLI_TENANCY }}
+          key_file=~/.oci/key.pem
+          EOF
+          echo "${{ env.OCI_CLI_KEY_CONTENT }}" > ~/.oci/key.pem
+
+      - name: Install OCI CLI
+        run: |
+          curl -L -O https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh
+          chmod +x install.sh
+          ./install.sh --accept-all-defaults
+          echo "/home/runner/bin" >> $GITHUB_PATH
+
+      - name: "Fix OCI Config File Permissions"
+        run: |
+          oci setup repair-file-permissions --file /home/runner/.oci/config
+          oci setup repair-file-permissions --file /home/runner/.oci/key.pem
+
+      - name: Install the Fn Project CLI
+        run: |
+          curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh -s -- -b /home/runner/bin
+          fn create context env_context --provider oracle
+          fn use context env_context
+          fn update context oracle.compartment-id ${{secrets.PROD_COMPARTMENT}}
+          fn update context api-url https://functions.${{secrets.OPS_REGION}}.oci.oraclecloud.com
+          fn update context registry ${{secrets.PROD_REGION_SHORT}}.ocir.io/${{secrets.PROD_NAMESPACE}}/
+
+      - name: Get or create an OCIR Repository
+        uses: oracle-actions/get-ocir-repository@v1.3.0
+        id: get-ocir-repository
+        with:
+          name: ${{vars.FN_ROUTE}}
+          compartment: ${{secrets.PROD_COMPARTMENT}}
+
+      - name: Log into OCIR
+        uses: oracle-actions/login-ocir@v1.3.0
+        id: login-ocir
+        with:
+          auth_token: ${{secrets.PROD_AUTH_TOKEN}}
+
+      - name: Build, Tag and Push the Docker image
+        id: tag-and-push-image
+        env:
+          CURRENT_PROD: ${{secrets.PROD_REGION_SHORT}}.ocir.io/${{secrets.PROD_NAMESPACE}}/${{vars.FN_ROUTE}}:CURRENT_PROD
+        run: |
+          docker build --pull --rm -f "production_fn_route/Dockerfile" -t ${{env.CURRENT_PROD}} production_fn_route
+          docker push ${{env.CURRENT_PROD}}
+
+      - name: Create or Update Function
+        env:
+          IMG: ${{secrets.PROD_REGION_SHORT}}.ocir.io/${{secrets.PROD_NAMESPACE}}/${{vars.FN_ROUTE}}:CURRENT_PROD
+        run: |
+          set +e
+          output=$(fn inspect function ${{vars.PROD_NAME}} ${{vars.FN_ROUTE}} 2>&1)
+          exit_code=$?
+          set -e
+
+          if [[ $output == *"name\": \"${{vars.FN_ROUTE}}\""* ]]; then
+            fn update function ${{vars.PROD_NAME}} ${{vars.FN_ROUTE}} --image $IMG --annotation oracle.com/oci/imageDigest=""
+            echo "Function has been updated"
+          else
+            fn create function ${{vars.PROD_NAME}} ${{vars.FN_ROUTE}} $IMG --timeout 30 --memory 128
+            echo "Function has been created"
+          fi
+
+          if [[ $exit_code -ne 0 ]]; then
+            echo "Fn inspect failed with exit code $exit_code. Error message: $output"
+          fi

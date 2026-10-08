@@ -1,0 +1,31 @@
+name: "SYNCROINSPECT_PROD"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy_dev:
+    runs-on: host
+
+    defaults:
+      run:
+        working-directory: syncroinspect
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web (Expo)
+        run: npx expo export --platform web
+
+      - name: Push Live to Production
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=syncrosocial --branch=prod

@@ -1,0 +1,111 @@
+name: "GITEA_RELEASE_CREATE"
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag (e.g. v0.0.1-alpha)"
+        required: true
+
+jobs:
+  release:
+    runs-on: host
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build release artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /tmp/schema.sql /tmp/gateway.json /tmp/syncrosocial_api
+
+          test -f schema/prod.sql || { echo "Missing schema/prod.sql"; exit 1; }
+          cp schema/prod.sql /tmp/schema.sql
+
+          test -f gateway/prod.json || { echo "Missing gateway/prod.json"; exit 1; }
+          cp gateway/prod.json /tmp/gateway.json
+
+          API_BINARY="/usr/local/bin/SYNCROSOCIAL_API"
+          test -f "${API_BINARY}" || { echo "Missing API binary at ${API_BINARY}"; exit 1; }
+          cp "${API_BINARY}" /tmp/syncrosocial_api
+          chmod +x /tmp/syncrosocial_api
+
+      - name: Create/Update Gitea Release + Upload Assets
+        shell: bash
+        env:
+          REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          command -v curl >/dev/null 2>&1 || { echo "curl not found on runner"; exit 1; }
+          command -v jq >/dev/null 2>&1 || { echo "jq not found on runner"; exit 1; }
+
+          TAG="${{ github.event.inputs.release_tag }}"
+          test -n "${TAG}" || { echo "Missing input release_tag"; exit 1; }
+
+          BASE_URL="https://git.tragopoulos.com"
+          REPO="${GITHUB_REPOSITORY:-tragopoulos/operations}"
+
+          if [ -z "${REPO_ACCESS_TOKEN:-}" ]; then
+            echo "Missing secret REPO_ACCESS_TOKEN"
+            exit 1
+          fi
+
+          api() {
+            local method="$1"; shift
+            local path="$1"; shift
+            curl -fsS -X "${method}" \
+              -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+              -H "Content-Type: application/json" \
+              "${BASE_URL%/}/api/v1${path}" \
+              "$@"
+          }
+
+          echo "Resolving release id for ${REPO} tag ${TAG}"
+          RELEASE_JSON=""
+          if RELEASE_JSON=$(api GET "/repos/${REPO}/releases/tags/${TAG}" 2>/dev/null); then
+            :
+          else
+            RELEASE_JSON=""
+          fi
+
+          if [ -n "${RELEASE_JSON}" ]; then
+            RELEASE_ID=$(echo "${RELEASE_JSON}" | jq -r '.id')
+          else
+            PAYLOAD=$(jq -n --arg tag "${TAG}" --arg name "${TAG}" '{tag_name:$tag, name:$name, draft:false, prerelease:false}')
+            RELEASE_JSON=$(api POST "/repos/${REPO}/releases" -d "${PAYLOAD}")
+            RELEASE_ID=$(echo "${RELEASE_JSON}" | jq -r '.id')
+          fi
+
+          test -n "${RELEASE_ID}" || { echo "Failed to resolve/create release id"; exit 1; }
+
+          upload_asset() {
+            local asset_name="$1"
+            local asset_path="$2"
+
+            test -f "${asset_path}" || { echo "Missing asset file: ${asset_path}"; exit 1; }
+
+            ASSETS=$(curl -fsS \
+              -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+              "${BASE_URL%/}/api/v1/repos/${REPO}/releases/${RELEASE_ID}/assets")
+            EXISTING_ID=$(echo "${ASSETS}" | jq -r --arg n "${asset_name}" '.[] | select(.name==$n) | .id' | head -n1 || true)
+            if [ -n "${EXISTING_ID}" ] && [ "${EXISTING_ID}" != "null" ]; then
+              curl -fsS -X DELETE \
+                -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+                "${BASE_URL%/}/api/v1/repos/${REPO}/releases/${RELEASE_ID}/assets/${EXISTING_ID}" >/dev/null
+            fi
+
+            curl -fsS -X POST \
+              -H "Authorization: token ${REPO_ACCESS_TOKEN}" \
+              -F "attachment=@${asset_path}" \
+              "${BASE_URL%/}/api/v1/repos/${REPO}/releases/${RELEASE_ID}/assets?name=${asset_name}" >/dev/null
+          }
+
+          upload_asset "schema.sql" "/tmp/schema.sql"
+          upload_asset "gateway.json" "/tmp/gateway.json"
+          upload_asset "syncrosocial_api" "/tmp/syncrosocial_api"
+
+          echo "Release ${TAG} updated successfully."

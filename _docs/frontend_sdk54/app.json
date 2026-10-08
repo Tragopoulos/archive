@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "SyncroInspect",
+    "description": "SyncroInspect Application",
+    "version": "0.0.1",
+    "owner": "fotios",
+    "orientation": "portrait",
+    "scheme": "syncroinspect",
+    "slug": "syncroinspect",
+    "icon": "./assets/icons/icon.png",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "userInterfaceStyle": "automatic",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "07008d43-e67e-4fff-b0ba-6fbe4ff789b7"
+      }
+    },
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.syncroinspect",
+      "icon": {
+        "light": "./assets/icons/ios-light.png",
+        "dark": "./assets/icons/ios-dark.png",
+        "tinted": "./assets/icons/ios-tinted.png"
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.syncroinspect",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-icon.png"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/icons/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#f2f2f2",
+          "image": "./assets/icons/splash-icon-dark.png",
+          "dark": {
+            "image": "./assets/icons/splash-icon-light.png",
+            "backgroundColor": "#171e1f"
+          },
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0"
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

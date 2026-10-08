@@ -1,0 +1,102 @@
+name: "MS_API_PROD_DB"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: host
+
+    steps:
+      - name: Verify GeoLite Databases Exist
+        run: |
+          echo "--- Checking for GeoLite database files ---"
+
+          SOURCE_DIR="/usr/local/share/geoip"
+
+          if [ ! -f "$SOURCE_DIR/GeoLite2City.mmdb" ]; then
+            echo "ERROR: GeoLite2City.mmdb not found in $SOURCE_DIR"
+            echo "Please upload the database file to the runner first."
+            exit 1
+          fi
+
+          if [ ! -f "$SOURCE_DIR/GeoLite2ASN.mmdb" ]; then
+            echo "ERROR: GeoLite2ASN.mmdb not found in $SOURCE_DIR"
+            echo "Please upload the database file to the runner first."
+            exit 1
+          fi
+
+          echo "[OK] GeoLite2City.mmdb found ($(du -h $SOURCE_DIR/GeoLite2City.mmdb | cut -f1))"
+          echo "[OK] GeoLite2ASN.mmdb found ($(du -h $SOURCE_DIR/GeoLite2ASN.mmdb | cut -f1))"
+
+      - name: Deploy to Production Cluster
+        run: |
+          SOURCE_DIR="/usr/local/share/geoip"
+          TARGET_DIR="/usr/local/share/geoip"
+          SSH_USER="opc"
+          PROD_VMS="AREA52 AREA53 AREA54"
+
+          echo "--- Starting GeoLite Database Deployment ---"
+
+          for HOST in $PROD_VMS; do
+            echo "--- Deploying to $HOST ---"
+            
+            ssh "$SSH_USER@$HOST" "sudo mkdir -p $TARGET_DIR"
+            
+            echo "  • Copying GeoLite2City.mmdb..."
+            scp "$SOURCE_DIR/GeoLite2City.mmdb" "$SSH_USER@$HOST:/tmp/GeoLite2City.mmdb.new"
+            
+            echo "  • Copying GeoLite2ASN.mmdb..."
+            scp "$SOURCE_DIR/GeoLite2ASN.mmdb" "$SSH_USER@$HOST:/tmp/GeoLite2ASN.mmdb.new"
+            
+            ssh "$SSH_USER@$HOST" "
+              sudo mv /tmp/GeoLite2City.mmdb.new $TARGET_DIR/GeoLite2City.mmdb
+              sudo mv /tmp/GeoLite2ASN.mmdb.new $TARGET_DIR/GeoLite2ASN.mmdb
+              sudo chmod 644 $TARGET_DIR/GeoLite2City.mmdb
+              sudo chmod 644 $TARGET_DIR/GeoLite2ASN.mmdb
+              sudo chown root:root $TARGET_DIR/GeoLite2City.mmdb
+              sudo chown root:root $TARGET_DIR/GeoLite2ASN.mmdb
+            "
+            
+            echo "[OK] Successfully deployed to $HOST"
+          done
+
+      - name: Verify Deployment
+        run: |
+          SSH_USER="opc"
+          PROD_VMS="AREA52 AREA53 AREA54"
+          TARGET_DIR="/usr/local/share/geoip"
+
+          echo "--- Verifying Deployment ---"
+          echo ""
+
+          FAILED_HOSTS=""
+
+          for HOST in $PROD_VMS; do
+            echo "Checking $HOST..."
+            
+            RESULT=$(ssh "$SSH_USER@$HOST" "
+              if [ -f $TARGET_DIR/GeoLite2City.mmdb ] && [ -f $TARGET_DIR/GeoLite2ASN.mmdb ]; then
+                echo 'OK: Both files present'
+                ls -lh $TARGET_DIR/GeoLite2*.mmdb
+              else
+                echo 'ERROR: Files missing'
+                exit 1
+              fi
+            " 2>&1)
+            
+            if [ $? -eq 0 ]; then
+              echo "  [OK] $HOST: $RESULT"
+            else
+              echo "  [FAILED] $HOST: FAILED"
+              FAILED_HOSTS="$FAILED_HOSTS $HOST"
+            fi
+            echo ""
+          done
+
+          if [ -n "$FAILED_HOSTS" ]; then
+            echo "[ERROR] Deployment failed on:$FAILED_HOSTS"
+            exit 1
+          fi
+
+          echo "[SUCCESS] GeoLite databases successfully deployed to all production servers"
