@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore"
 import { Platform } from "react-native"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyALyAQ4Qoe-gDd7VeAY_EsX420kfcRQfVo",
-  authDomain: "syncropet.firebaseapp.com",
-  projectId: "syncropet",
-  storageBucket: "syncropet.appspot.com",
-  messagingSenderId: "868197467732",
-  appId: "1:868197467732:web:416c819f7d347bf2b2cfc1",
-  measurementId: "G-T44DC0611S"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 }
 
 /** Creates the firebase auth and firestore */
