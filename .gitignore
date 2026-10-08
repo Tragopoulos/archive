@@ -1,0 +1,80 @@
+# Global
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.orig.*
+*.swp
+
+# AI agent files
+AGENTS.md
+CLAUDE.md
+.claude/
+.aider*
+
+# Node.js
+node_modules/
+dist/
+build/
+web-build/
+.expo/
+.expo-shared/
+expo-env.d.ts
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
+.firebaserc
+.kotlin/
+**/android/
+**/ios/
+
+# Secrets & Certificates (Node.js)
+*.env
+*.env.*
+!.env.example
+*.pem
+*.p8
+*.p12
+*.jks
+*.key
+*.crt
+*.csr
+*.mobileprovision
+
+# Go (api/, mailer/, logger/)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.*
+*.coverprofile
+profile.cov
+vendor/
+go.work
+go.work.sum
+
+# Terraform (iac/)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Data files
+*.mmdb
+services/api/db/*.mmdb

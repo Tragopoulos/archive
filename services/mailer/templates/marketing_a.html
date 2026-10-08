@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{ .Subject }}</title>
+    <style type="text/css">
+        @media screen and (max-width: 620px) {
+            .column {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:#f8f8f8;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:#f8f8f8;padding:0;margin:0;">
+
+        {{if .Components.hero}}
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" bgcolor="#f8f8f8" style="padding:10px 30px;line-height:18px;">
+                            <p
+                                style="margin:0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                <a href="{{ .Components.hero.view_online_link }}" style="color:#444444;text-decoration:underline;">{{
+                                    .Components.hero.view_online_text }}</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {{end}}
+
+        {{if .Components.logo}}
+        <div style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+
+                    <tr>
+                        <td style="padding:30px;">
+                            <img src="{{ .Components.logo.logo_image }}" width="60" alt="{{ .Components.logo.logo_alt }}"
+                                style="border:0;width:60px;max-width:100%;height:auto;" />
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.hero}}
+                    <tr>
+                        <td style="padding:0;">
+                            <img src="{{ .Components.hero.banner_image }}" width="600" alt="{{ .Components.hero.banner_alt }}"
+                                style="border:0;width:100%;max-width:600px;height:auto;display:block;" />
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.primary}}
+                    <tr>
+                        <td align="left" style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_greeting }} </p>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_body_paragraph1 }} </p>
+                            <p
+                                style="margin:0 0 40px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_body_paragraph2 }}</p>
+
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#1B9EDA"
+                                            style="border:2px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                            <a href="{{ .Components.primary.primary_cta_link }}"
+                                                style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#ffffff;display:block;">{{
+                                                .Components.primary.primary_cta_text }}</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p
+                                style="margin:40px 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_body_paragraph3 }} </p>
+                            <h2
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:20px;line-height:24px;font-weight:normal;">
+                                {{ .Components.primary.primary_heading }}</h2>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_list_intro }} </p>
+                            <ul
+                                style="margin:0 0 12px 0;padding-left:20px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                <li style="margin:0;">{{ .Components.primary.primary_list_item1 }}</li>
+                                <li style="margin:0;">{{ .Components.primary.primary_list_item2 }}</li>
+                                <li style="margin:0;">{{ .Components.primary.primary_list_item3 }}</li>
+                            </ul>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                {{ .Components.primary.primary_ordered_list_intro }}</p>
+                            <ol
+                                style="margin:0;padding-left:20px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                <li style="margin:0;">{{ .Components.primary.primary_ordered_item1 }}</li>
+                                <li style="margin:0;">{{ .Components.primary.primary_ordered_item2 }}</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.secondary}}
+                    <tr>
+                        <td bgcolor="#1B9EDA" align="left"
+                            style="padding:40px 30px 50px 30px;background-color:#1B9EDA;">
+                            <h3
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#ffffff;font-size:16px;line-height:22px;font-weight:bold;">
+                                {{ .Components.secondary.secondary_heading }} </h3>
+                            <p
+                                style="margin:0 0 40px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#ffffff;">
+                                {{ .Components.secondary.secondary_body }} </p>
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#1B9EDA"
+                                            style="border:2px solid #ffffff;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                            <a href="{{ .Components.secondary.secondary_cta_link }}"
+                                                style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#ffffff;display:block;">{{
+                                                .Components.secondary.secondary_cta_text }}</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.tertiary}}
+                    <tr>
+                        <td bgcolor="#ededed"
+                            style="padding:40px 10px;background-color:#ededed;text-align:center;font-size:0;">
+
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        {{if .Components.tertiary.tertiary_col1_image}}
+                                        <tr>
+                                            <td style="padding:0;">
+                                                <img src="{{ .Components.tertiary.tertiary_col1_image }}" width="260"
+                                                    alt="{{ .Components.tertiary.tertiary_col1_image_alt }}"
+                                                    style="border:0;width:260px;max-width:100%;height:auto;" />
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                        {{if .Components.tertiary.tertiary_col1_heading}}
+                                        <tr>
+                                            <td align="left" style="padding:24px 10px 40px 10px;">
+                                                <h4
+                                                    style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:16px;line-height:22px;font-weight:bold;">
+                                                    {{ .Components.tertiary.tertiary_col1_heading }} </h4>
+                                                <p
+                                                    style="margin:0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    {{ .Components.tertiary.tertiary_col1_body }} <a href="{{ .Components.tertiary.tertiary_col1_link }}"
+                                                        style="color:#1B9EDA;text-decoration:underline;">{{
+                                                        .Components.tertiary.tertiary_col1_link_text }}</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        {{if .Components.tertiary.tertiary_col2_image}}
+                                        <tr>
+                                            <td style="padding:0;">
+                                                <img src="{{ .Components.tertiary.tertiary_col2_image }}" width="260"
+                                                    alt="{{ .Components.tertiary.tertiary_col2_image_alt }}"
+                                                    style="border:0;width:260px;max-width:100%;height:auto;" />
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                        {{if .Components.tertiary.tertiary_col2_heading}}
+                                        <tr>
+                                            <td align="left" style="padding:24px 10px 40px 10px;">
+                                                <h4
+                                                    style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:16px;line-height:22px;font-weight:bold;">
+                                                    {{ .Components.tertiary.tertiary_col2_heading }} </h4>
+                                                <p
+                                                    style="margin:0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    {{ .Components.tertiary.tertiary_col2_body }} <a href="{{ .Components.tertiary.tertiary_col2_link }}"
+                                                        style="color:#1B9EDA;text-decoration:underline;">{{
+                                                        .Components.tertiary.tertiary_col2_link_text }}</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.tertiary}}
+                    <tr>
+                        <td bgcolor="#ffffff"
+                            style="padding:40px 10px;background-color:#ffffff;text-align:center;font-size:0;">
+
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        {{if .Components.tertiary.tertiary_btn_col1_body}}
+                                        <tr>
+                                            <td align="left" style="padding:0 10px 40px 10px;">
+                                                <p
+                                                    style="margin:0 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    {{ .Components.tertiary.tertiary_btn_col1_body }} </p>
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                    style="margin:0 auto;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" bgcolor="#ffffff"
+                                                                style="border:1px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                                                <a href="{{ .Components.tertiary.tertiary_btn_col1_link }}"
+                                                                    style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#1B9EDA;display:block;">{{
+                                                                    .Components.tertiary.tertiary_btn_col1_text }}</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        {{if .Components.tertiary.tertiary_btn_col2_body}}
+                                        <tr>
+                                            <td align="left" style="padding:0 10px 40px 10px;">
+                                                <p
+                                                    style="margin:0 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    {{ .Components.tertiary.tertiary_btn_col2_body }} </p>
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                    style="margin:0 auto;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" bgcolor="#ffffff"
+                                                                style="border:1px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                                                <a href="{{ .Components.tertiary.tertiary_btn_col2_link }}"
+                                                                    style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#1B9EDA;display:block;">{{
+                                                                    .Components.tertiary.tertiary_btn_col2_text }}</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {{end}}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                    </tr>
+                    {{end}}
+
+                    {{if .Components.footer}}
+                    <tr>
+                        <td align="left" style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 24px 0;border-top:1px solid #AFAFAF;padding-top:40px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Footer content here
+                            </p>
+                        </td>
+                    </tr>
+                    {{end}}
+
+                </tbody>
+            </table>
+        </div>
+
+        {{if .Components.footer}}
+        <div style="max-width:600px;width:100%;margin:0 auto;background-color:#f8f8f8;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                {{ .Components.footer.footer_legal_heading }}</p>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                {{ .Components.footer.footer_legal_body }}
+                                <a href="{{ .Components.footer.footer_links_link }}" style="color:#444444;text-decoration:underline;">{{
+                                    .Components.footer.footer_links_text }}</a>.
+                            </p>
+                            <p
+                                style="margin:0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                {{ .Components.footer.footer_unsubscribe_text }} <a href="{{ .Components.footer.footer_privacy_link }}"
+                                    style="color:#444444;text-decoration:underline;">{{ .Components.footer.footer_privacy_text }}</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {{end}}
+
+    </div>
+
+</body>
+
+</html>

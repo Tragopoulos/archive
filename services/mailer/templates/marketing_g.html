@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Subject }}</title>
+    <style>
+        @media screen {
+            @font-face {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2) format('woff2');
+            }
+        }
+
+        @media only screen and (max-width:620px) {
+            .pc-features-row-col, .pc-footer-row-col { max-width: 100% !important }
+        }
+    </style>
+</head>
+
+<body style="background-color:#f4f4f4;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;width:100%;margin:0;padding:0;line-height:1.5;">
+    <div style="background-color:#f4f4f4;padding:20px 10px;">
+        {{if .Components.content}}
+        <div style="max-width:620px;width:100%;margin:0 auto;box-shadow:0 2px 4px 0 rgba(0,0,0,0.1);">
+
+            <div style="background-color:#ffffff;padding:34px 40px 55px;text-align:center;">
+                <a href="{{ .Components.content.header_logo_link }}" style="text-decoration:none;">
+                    <img src="{{ .Components.content.header_logo_image }}" width="130" height="22" alt="" style="display:block;border:0;margin:0 auto;">
+                </a>
+                <div style="height:61px;"></div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:500;color:#40BE65;margin-bottom:12px;">
+                    {{ .Components.content.intro_label }}
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:36px;font-weight:800;line-height:1.28;letter-spacing:-0.6px;color:#1B1B1B;margin-bottom:30px;">
+                    {{ .Components.content.intro_heading }}
+                </div>
+                <img src="{{ .Components.content.intro_image }}" width="346" height="277" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;margin-top:30px;margin-bottom:24px;">
+                    {{ .Components.content.intro_description }}
+                </div>
+                <a href="{{ .Components.content.intro_button_link }}" style="line-height:1.5;text-decoration:none;padding:13px 17px;white-space:nowrap;border-radius:8px;font-weight:500;display:inline-block;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;background-color:#1595E7;color:#ffffff;border:1px solid #1595E7;">{{ .Components.content.intro_button }}</a>
+            </div>
+
+            <div style="background-color:#ffffff;padding:40px 20px 35px;text-align:center;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#151515;padding:0 20px;margin-bottom:10px;">
+                    {{ .Components.content.features_heading }}
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;padding:0 20px;margin-bottom:20px;">
+                    {{ .Components.content.features_description }}
+                </div>
+                <div style="font-size:0;text-align:center;">
+                    <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+                        <img src="{{ .Components.content.feature1_icon }}" width="74" height="74" alt="" style="display:block;border:0;margin:0 auto;">
+                        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;text-align:center;margin-top:13px;margin-bottom:7px;">
+                            {{ .Components.content.feature1_title }}
+                        </div>
+                    </div>
+                    <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+                        <img src="{{ .Components.content.feature2_icon }}" width="74" height="74" alt="" style="display:block;border:0;margin:0 auto;">
+                        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;text-align:center;margin-top:13px;margin-bottom:7px;">
+                            {{ .Components.content.feature2_title }}
+                        </div>
+                    </div>
+                    <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+                        <img src="{{ .Components.content.feature3_icon }}" width="74" height="74" alt="" style="display:block;border:0;margin:0 auto;">
+                        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;text-align:center;margin-top:13px;margin-bottom:7px;">
+                            {{ .Components.content.feature3_title }}
+                        </div>
+                    </div>
+                </div>
+                <div style="height:25px;"></div>
+                <a href="{{ .Components.content.features_button_link }}" style="line-height:1.5;text-decoration:none;padding:13px 17px;white-space:nowrap;border-radius:8px;font-weight:500;display:inline-block;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;background-color:#1595E7;color:#ffffff;border:1px solid #1595E7;">{{ .Components.content.features_button }}</a>
+            </div>
+
+            <div style="background-color:#ffffff;padding:40px 30px 32px;text-align:center;">
+                <img src="{{ .Components.content.app_icon }}" width="72" height="72" alt="" style="display:block;border:0;margin:0 auto 14px;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#151515;margin-bottom:10px;">
+                    {{ .Components.content.app_heading }}
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;color:#9B9B9B;margin-bottom:9px;">
+                    {{ .Components.content.app_description }}
+                </div>
+            </div>
+
+            <div style="background-color:#ffffff;padding:31px 40px;">
+                <div style="text-align:center;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;color:#9B9B9B;line-height:1.43;">
+                    <a href="{{ .Components.content.footer_manage_link }}" style="text-decoration:none;color:#1595E7;">{{ .Components.content.footer_manage_text }}</a>
+                    <span>&nbsp;&nbsp;</span>
+                    <a href="{{ .Components.content.footer_unsubscribe_link }}" style="text-decoration:none;color:#1595E7;">{{ .Components.content.footer_unsubscribe_text }}</a>
+                </div>
+            </div>
+
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>

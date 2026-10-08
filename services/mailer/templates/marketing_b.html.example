@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+	<title></title>
+	<style type="text/css">
+		@media (max-width: 700px) {
+			.col {
+				min-width: 320px !important;
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.menu-checkbox[type="checkbox"]~.menu-links {
+				display: none !important;
+				padding: 5px 0;
+			}
+
+			.menu-checkbox[type="checkbox"]~.menu-links span.sep {
+				display: none;
+			}
+
+			.menu-checkbox[type="checkbox"]:checked~.menu-links,
+			.menu-checkbox[type="checkbox"]~.menu-trigger {
+				display: block !important;
+				max-width: none !important;
+				max-height: none !important;
+				font-size: inherit !important;
+			}
+
+			.menu-checkbox[type="checkbox"]~.menu-links>a,
+			.menu-checkbox[type="checkbox"]~.menu-links>span.label {
+				display: block !important;
+				text-align: center;
+			}
+
+			.menu-checkbox[type="checkbox"]:checked~.menu-trigger .menu-close {
+				display: block !important;
+			}
+
+			.menu-checkbox[type="checkbox"]:checked~.menu-trigger .menu-open {
+				display: none !important;
+			}
+
+			#menuqhqde8:checked~.menu-links {
+				background-color: #ffffff !important;
+			}
+
+			#menuqhqde8:checked~.menu-links a,
+			#menuqhqde8:checked~.menu-links span {
+				color: #292f37 !important;
+			}
+		}
+	</style>
+</head>
+
+<body style="background-color:#e1cfc3;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+	<div style="background-color:#e1cfc3;padding:0;margin:0;">
+		<div style="max-width:680px;width:100%;margin:0 auto;background-color:#f5f2e3;">
+
+			<!-- Header: logo + nav + banner -->
+			<div style="background-color:#ffffff;padding:5px 0 0 0;">
+
+				<!-- Logo -->
+				<div style="text-align:center;padding:0 0 20px 0;">
+					<img src="https://placehold.co/136x60?text=Logo" alt="your-logo" width="136"
+						style="border:0;width:136px;max-width:100%;height:auto;display:inline-block;" />
+				</div>
+
+				<!-- Nav -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody>
+						<tr>
+							<td align="center" style="padding:15px 0;font-size:0;">
+								<input class="menu-checkbox" id="menuqhqde8"
+									style="display:none !important;max-height:0;visibility:hidden;" type="checkbox" />
+								<div class="menu-trigger"
+									style="display:none;max-height:0px;max-width:0px;font-size:0px;overflow:hidden;">
+									<label class="menu-label" for="menuqhqde8"
+										style="height:36px;width:36px;display:inline-block;cursor:pointer;user-select:none;text-align:center;color:#292f37;text-decoration:none;background-color:#ffffff;">
+										<span class="menu-open" style="font-size:26px;line-height:36px;">&#9776;</span>
+										<span class="menu-close"
+											style="display:none;font-size:26px;line-height:36px;">&#10005;</span>
+									</label>
+								</div>
+								<div class="menu-links">
+									<a href="http://www.example.com"
+										style="padding:15px;display:inline;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:2px;">NEW
+										PRODUCTS</a>
+									<span class="sep"
+										style="font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#292f37;">|</span>
+									<span class="label"
+										style="padding:15px;display:inline;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#292f37;letter-spacing:2px;">SALES</span>
+									<span class="sep"
+										style="font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#292f37;">|</span>
+									<a href="http://www.example.com"
+										style="padding:15px;display:inline;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:2px;">ABOUT</a>
+									<span class="sep"
+										style="font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#292f37;">|</span>
+									<a href="http://www.example.com"
+										style="padding:15px;display:inline;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:2px;">CONTACTS</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- Banner image -->
+				<img src="https://picsum.photos/seed/cosmetics/680/300" alt="cosmetics-products" width="680"
+					style="border:0;width:100%;max-width:680px;height:auto;display:block;" />
+
+			</div>
+
+			<!-- Hero content -->
+			<div style="background-color:#ffffff;text-align:center;padding:25px 10px;">
+				<h1
+					style="font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:32px;font-weight:normal;letter-spacing:3px;line-height:1.2;color:#292f37;text-align:center;margin:0 0 5px 0;">
+					New Collection Launch</h1>
+				<p
+					style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:46px;font-weight:bold;letter-spacing:5px;line-height:1.2;color:#292f37;text-align:center;margin:0 0 10px 0;">
+					<strong>SUMMER 2026</strong></p>
+				<p
+					style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#393d47;text-align:center;margin:0 auto 10px auto;max-width:500px;">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+					laoreet dolore magna aliquam erat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</p>
+				<p
+					style="font-family:Georgia,Times,'Times New Roman',serif;font-size:20px;line-height:1.2;color:#292f37;text-align:center;margin:0 0 10px 0;">
+					GET <strong>5% OFF</strong> USING THE CODE</p>
+				<div style="border-top:1px solid #292F37;width:30%;margin:15px auto 5px auto;"></div>
+				<p
+					style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;font-weight:bold;letter-spacing:4px;line-height:1.5;color:#90572e;text-align:center;margin:5px 0;">
+					<strong>LOREM26</strong></p>
+				<div style="border-top:1px solid #292F37;width:30%;margin:5px auto 15px auto;"></div>
+				<div style="padding:10px;">
+					<a href="www.example.com"
+						style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#1a52a8;border-radius:5px;border:1px solid #1a52a8;padding:10px 20px;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:16px;letter-spacing:2px;"><strong>SHOP
+							NOW</strong></a>
+				</div>
+			</div>
+
+			<!-- Hashtag section -->
+			<div style="padding:30px 10px;text-align:center;">
+				<p
+					style="font-family:Georgia,Times,'Times New Roman',serif;font-size:38px;line-height:1.2;color:#393d47;text-align:center;margin:0;">
+					#LoremIpsum</p>
+			</div>
+
+			<!-- Story #01 - 2 col (image left, text right) -->
+			<div style="background-color:#ffffff;text-align:center;font-size:0;">
+				<div class="col"
+					style="width:340px;max-width:100%;display:inline-block;vertical-align:top;background-color:#fffdfd;">
+					<img src="https://picsum.photos/seed/story01/340/340" alt="Product-image-01" width="340"
+						style="border:0;width:340px;max-width:100%;height:auto;display:block;" />
+				</div>
+				<div class="col"
+					style="width:340px;max-width:100%;display:inline-block;vertical-align:top;font-size:16px;text-align:left;padding:5px 0;">
+					<div style="padding:10px 10px 10px 20px;">
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#292f37;margin:0 0 10px 0;">
+							Story #01</p>
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#292f37;margin:0 0 10px 0;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu vitae magna aliquet
+							sodales sit amet maut sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed
+							arcu vitae magna aliquet sodales sit amet maut sem.</p>
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:22px;font-weight:bold;line-height:1.2;color:#90572e;margin:0 0 10px 0;">
+							<strong>Start from $ 68.00</strong></p>
+						<a href="http://www.example.com"
+							style="text-decoration:none;display:inline-block;color:#292f37;background-color:transparent;border-radius:4px;border:2px solid #292F37;padding:5px 30px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:1px;"><strong>SHOP
+								NOW</strong></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Story #02 - 2 col reversed (image right, text left) -->
+			<div style="background-color:#ffffff;text-align:center;font-size:0;direction:rtl;">
+				<div class="col"
+					style="width:340px;max-width:100%;display:inline-block;vertical-align:top;direction:ltr;">
+					<img src="https://picsum.photos/seed/story02/340/340" alt="product-image-02" width="340"
+						style="border:0;width:340px;max-width:100%;height:auto;display:block;" />
+				</div>
+				<div class="col"
+					style="width:340px;max-width:100%;display:inline-block;vertical-align:top;direction:ltr;font-size:16px;text-align:left;padding:5px 0;">
+					<div style="padding:10px 10px 10px 20px;">
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#292f37;margin:0 0 10px 0;">
+							Story #02</p>
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#292f37;margin:0 0 10px 0;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu vitae magna aliquet
+							sodales sit amet maut sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed
+							arcu vitae magna aliquet sodales sit amet maut sem.</p>
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:22px;font-weight:bold;line-height:1.2;color:#90572e;margin:0 0 10px 0;">
+							<strong>Start from $ 68.00</strong></p>
+						<a href="http://www.example.com"
+							style="text-decoration:none;display:inline-block;color:#292f37;background-color:transparent;border-radius:4px;border:2px solid #292F37;padding:5px 30px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:1px;"><strong>SHOP
+								NOW</strong></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Spacer -->
+			<div style="background-color:#ffffff;padding:35px 0;"></div>
+
+			<!-- Story #03 - 2 col (image left, text right) -->
+			<div style="background-color:#ffffff;text-align:center;font-size:0;">
+				<div class="col" style="width:340px;max-width:100%;display:inline-block;vertical-align:top;">
+					<img src="https://picsum.photos/seed/story03/340/340" alt="Product-image-03" width="340"
+						style="border:0;width:340px;max-width:100%;height:auto;display:block;" />
+				</div>
+				<div class="col"
+					style="width:340px;max-width:100%;display:inline-block;vertical-align:top;font-size:16px;text-align:left;padding:5px 0;">
+					<div style="padding:10px 10px 10px 20px;">
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#292f37;margin:0 0 10px 0;">
+							Story #03</p>
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#292f37;margin:0 0 10px 0;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu vitae magna aliquet
+							sodales sit amet maut sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed
+							arcu vitae magna aliquet sodales sit amet maut sem.</p>
+						<p
+							style="font-family:Georgia,Times,'Times New Roman',serif;font-size:22px;font-weight:bold;line-height:1.2;color:#90572e;margin:0 0 10px 0;">
+							<strong>Start from $ 68.00</strong></p>
+						<a href="http://www.example.com"
+							style="text-decoration:none;display:inline-block;color:#292f37;background-color:transparent;border-radius:4px;border:2px solid #292F37;padding:5px 30px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:1px;"><strong>SHOP
+								NOW</strong></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- "Our Most Wanted Product" heading -->
+			<div style="background-color:#ffffff;padding:30px 0 0 0;text-align:center;">
+				<h1
+					style="font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:23px;font-weight:bold;letter-spacing:1px;line-height:2;color:#1a52a8;text-align:center;margin:0;">
+					<strong>Our Most Wanted Product</strong></h1>
+			</div>
+
+			<!-- 3-column products -->
+			<div style="background-color:#ffffff;text-align:center;font-size:0;padding:5px 0;">
+
+				<!-- Product 1: Love Bite -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:16px;">
+					<div style="padding:5px 0;">
+						<img src="https://picsum.photos/seed/product1/227/227" width="227"
+							style="border:0;width:227px;max-width:100%;height:auto;display:block;" />
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.2;color:#555555;text-align:center;margin:10px;">
+							<strong>Love Bite</strong></p>
+						<p
+							style="font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:14px;line-height:1.2;color:#393d47;text-align:center;margin:10px;">
+							CAD $68/12 Pack</p>
+						<div style="text-align:center;padding:10px;">
+							<a href=""
+								style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#1a52a8;border-radius:5px;border:1px solid #1a52a8;padding:10px 20px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;">Shop
+								Now</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 2: Variety Six Pack -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:16px;">
+					<div style="padding:5px 0;">
+						<img src="https://picsum.photos/seed/product2/227/227" width="227"
+							style="border:0;width:227px;max-width:100%;height:auto;display:block;" />
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.2;color:#555555;text-align:center;margin:10px;">
+							<strong>Variety Six Pack</strong></p>
+						<p
+							style="font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:14px;line-height:1.2;color:#393d47;text-align:center;margin:10px;">
+							CAD $68/12 Pack</p>
+						<div style="text-align:center;padding:10px;">
+							<a href=""
+								style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#1a52a8;border-radius:5px;border:1px solid #1a52a8;padding:10px 20px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;">Shop
+								Now</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 3: Wild Card -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:16px;">
+					<div style="padding:5px 0;">
+						<img src="https://picsum.photos/seed/product3/227/227" width="227"
+							style="border:0;width:227px;max-width:100%;height:auto;display:block;" />
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.2;color:#555555;text-align:center;margin:10px;">
+							<strong>Wild Card</strong></p>
+						<p
+							style="font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:14px;line-height:1.2;color:#393d47;text-align:center;margin:10px;">
+							CAD $68/12 Pack</p>
+						<div style="text-align:center;padding:10px;">
+							<a href=""
+								style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#1a52a8;border-radius:5px;border:1px solid #1a52a8;padding:10px 20px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;">Shop
+								Now</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Horizontal divider -->
+			<div style="background-color:#ffffff;padding:15px;">
+				<div style="border-top:1px solid #BBBBBB;"></div>
+			</div>
+
+			<!-- Footer: 3 cols -->
+			<div style="background-color:#ffffff;text-align:center;font-size:0;padding:10px 0 25px 0;">
+
+				<!-- Col 1: Logo + social icons + address -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:12px;">
+					<div style="padding:10px;">
+						<div style="text-align:center;padding:0 10px 10px 10px;">
+							<img src="https://placehold.co/102x42?text=Logo" alt="Logo-dark" width="102"
+								style="border:0;width:102px;max-width:100%;height:auto;display:inline-block;" />
+						</div>
+						<table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto 10px auto;">
+							<tbody>
+								<tr>
+									<td style="padding:0 5px;"><a href="https://www.facebook.com/"
+											style="display:block;"><img alt="Facebook" height="32" width="32"
+												src="https://placehold.co/32x32/1877f2/ffffff?text=f"
+												style="border:0;display:block;" /></a></td>
+									<td style="padding:0 5px;"><a href="https://www.twitter.com/"
+											style="display:block;"><img alt="Twitter" height="32" width="32"
+												src="https://placehold.co/32x32/1da1f2/ffffff?text=t"
+												style="border:0;display:block;" /></a></td>
+									<td style="padding:0 5px;"><a href="https://www.instagram.com/"
+											style="display:block;"><img alt="Instagram" height="32" width="32"
+												src="https://placehold.co/32x32/e1306c/ffffff?text=in"
+												style="border:0;display:block;" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.2;color:#292f37;text-align:center;margin:0;">
+							Your Street 1234, Your City<br>info@example.com<br>(+0) 123 456 789</p>
+					</div>
+				</div>
+
+				<!-- Col 2: Nav links -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:12px;">
+					<div style="text-align:left;padding-top:15px;">
+						<a href="www.example.com"
+							style="display:block;padding:10px 10px 10px 20px;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:3px;">NEW
+							PRODUCTS</a>
+						<a href="www.example.com"
+							style="display:block;padding:10px 10px 10px 20px;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:3px;">SALES</a>
+						<a href="www.example.com"
+							style="display:block;padding:10px 10px 10px 20px;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:3px;">ABOUT</a>
+						<a href="www.example.com"
+							style="display:block;padding:10px 10px 10px 20px;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:3px;">CONTACTS</a>
+						<a href="www.example.com"
+							style="display:block;padding:10px 10px 10px 20px;color:#292f37;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;letter-spacing:3px;">FAQ</a>
+					</div>
+				</div>
+
+				<!-- Col 3: Terms + unsubscribe -->
+				<div class="col"
+					style="width:226px;max-width:100%;display:inline-block;vertical-align:top;font-size:12px;">
+					<div style="padding:25px 10px 10px 20px;">
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;letter-spacing:1px;line-height:1.2;color:#292f37;text-align:center;margin:0 0 10px 0;">
+							<strong>Terms and conditions</strong></p>
+						<p
+							style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#292f37;text-align:center;margin:0 0 10px 0;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu vitae magna aliquet
+							sodales sit amet maut sem.</p>
+						<p
+							style="text-align:center;margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:#292f37;">
+							<a href="http://www.example.com"
+								style="display:inline;color:#292f37;text-decoration:none;padding:20px 5px;">Unsubscribe</a>
+							<span style="font-size:12px;color:#292f37;">|</span>
+							<a href="http://www.example.com"
+								style="display:inline;color:#292f37;text-decoration:none;padding:20px 5px;">Manage
+								Preferences</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

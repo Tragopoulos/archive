@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <style type="text/css">
+        @media screen and (max-width: 620px) {
+            .column {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:#f8f8f8;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:#f8f8f8;padding:0;margin:0;">
+
+        <!-- View online -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" bgcolor="#f8f8f8" style="padding:10px 30px;line-height:18px;">
+                            <p
+                                style="margin:0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                <a href="#" style="color:#444444;text-decoration:underline;">View online</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Main card -->
+        <div style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+
+                    <!-- Logo -->
+                    <tr>
+                        <td style="padding:30px;">
+                            <img src="https://placehold.co/60x60/1B9EDA/ffffff?text=Logo" width="60" alt="Acme Inc."
+                                style="border:0;width:60px;max-width:100%;height:auto;" />
+                        </td>
+                    </tr>
+
+                    <!-- Banner image -->
+                    <tr>
+                        <td style="padding:0;">
+                            <img src="https://picsum.photos/seed/banner1/600/300" width="600" alt="Banner"
+                                style="border:0;width:100%;max-width:600px;height:auto;display:block;" />
+                        </td>
+                    </tr>
+
+                    <!-- Body text + primary CTA -->
+                    <tr>
+                        <td align="left" style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Dear [[FirstName]], </p>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Personalize the message where possible. This helps grab the readers' attention, and
+                                drives better engagement. </p>
+                            <p
+                                style="margin:0 0 40px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Place important information at the beginning. Give the reader the opportunity to take
+                                action straight away with a clear call-to-action. In this example, there are multiple
+                                calls-to-action, so we need to follow a hierarchy.</p>
+
+                            <!-- Primary CTA button -->
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#1B9EDA"
+                                            style="border:2px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                            <a href="#"
+                                                style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#ffffff;display:block;">PRIMARY
+                                                CALL TO ACTION</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p
+                                style="margin:40px 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Keep paragraphs and sentences short. For example, no more than 20 words per sentence, or
+                                five sentences per paragraph. Use direct, succinct and practical language with no hype
+                                or jargon. Communicate in a way that is easy to understand. Be friendly, clear, and
+                                concise. </p>
+                            <h2
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:20px;line-height:24px;font-weight:normal;">
+                                Use sub-headings to break up content into sections</h2>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Use lists instead of long paragraphs to further simplify the message. Simple language
+                                drives content that is: </p>
+                            <ul
+                                style="margin:0 0 12px 0;padding-left:20px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                <li style="margin:0;">scannable</li>
+                                <li style="margin:0;">accessible to a wider audience</li>
+                                <li style="margin:0;">easier to understand</li>
+                            </ul>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Use numbered lists when the list items are in a required order. For example:</p>
+                            <ol
+                                style="margin:0;padding-left:20px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                <li style="margin:0;">This list item happens first.</li>
+                                <li style="margin:0;">This list item happens next.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <!-- Secondary section (blue bg) -->
+                    <tr>
+                        <td bgcolor="#1B9EDA" align="left"
+                            style="padding:40px 30px 50px 30px;background-color:#1B9EDA;">
+                            <h3
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#ffffff;font-size:16px;line-height:22px;font-weight:bold;">
+                                Secondary content heading </h3>
+                            <p
+                                style="margin:0 0 40px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#ffffff;">
+                                Use the secondary content section to draw attention to a separate piece of content. If
+                                you are using a secondary call-to-action button, avoid using an image to reduce visual
+                                clutter. </p>
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#1B9EDA"
+                                            style="border:2px solid #ffffff;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                            <a href="#"
+                                                style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#ffffff;display:block;">SECONDARY
+                                                CALL TO ACTION</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Two-column section (gray bg) with images -->
+                    <tr>
+                        <td bgcolor="#ededed"
+                            style="padding:40px 10px;background-color:#ededed;text-align:center;font-size:0;">
+
+                            <!-- Column 1 -->
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:0;">
+                                                <img src="https://picsum.photos/seed/col1/260/200" width="260"
+                                                    alt="Column 1"
+                                                    style="border:0;width:260px;max-width:100%;height:auto;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="padding:24px 10px 40px 10px;">
+                                                <h4
+                                                    style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:16px;line-height:22px;font-weight:bold;">
+                                                    Tertiary content heading </h4>
+                                                <p
+                                                    style="margin:0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    Tertiary content with images should contain short sentences and text
+                                                    link <a href=""
+                                                        style="color:#1B9EDA;text-decoration:underline;">tertiary&nbsp;call-to-action</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:0;">
+                                                <img src="https://picsum.photos/seed/col2/260/200" width="260"
+                                                    alt="Column 2"
+                                                    style="border:0;width:260px;max-width:100%;height:auto;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="padding:24px 10px 40px 10px;">
+                                                <h4
+                                                    style="margin:0 0 12px 0;font-family:Roboto,sans-serif;color:#1B9EDA;font-size:16px;line-height:22px;font-weight:bold;">
+                                                    Tertiary content heading </h4>
+                                                <p
+                                                    style="margin:0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    Tertiary content with images should contain short sentences and text
+                                                    link <a href=""
+                                                        style="color:#1B9EDA;text-decoration:underline;">tertiary&nbsp;call-to-action</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <!-- Two-column section (white bg) with buttons -->
+                    <tr>
+                        <td bgcolor="#ffffff"
+                            style="padding:40px 10px;background-color:#ffffff;text-align:center;font-size:0;">
+
+                            <!-- Column 1 -->
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="padding:0 10px 40px 10px;">
+                                                <p
+                                                    style="margin:0 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    Tertiary content should not contain images if you are using the
+                                                    tertiary call-to-action&nbsp;buttons. </p>
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                    style="margin:0 auto;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" bgcolor="#ffffff"
+                                                                style="border:1px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                                                <a href="#"
+                                                                    style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#1B9EDA;display:block;">TERTIARY
+                                                                    CALL TO ACTION</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="column"
+                                style="width:100%;max-width:280px;display:inline-block;vertical-align:top;font-size:16px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" style="padding:0 10px 40px 10px;">
+                                                <p
+                                                    style="margin:0 0 24px 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                                    Tertiary content should not contain images if you are using the
+                                                    tertiary call-to-action&nbsp;buttons. </p>
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                    style="margin:0 auto;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" bgcolor="#ffffff"
+                                                                style="border:1px solid #1B9EDA;border-radius:4px;padding:15px 25px;line-height:20px;">
+                                                                <a href="#"
+                                                                    style="font-family:Roboto,sans-serif;font-size:14px;font-weight:bold;text-decoration:none;color:#1B9EDA;display:block;">TERTIARY
+                                                                    CALL TO ACTION</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <!-- Signature -->
+                    <tr>
+                        <td align="left" style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 24px 0;border-top:1px solid #AFAFAF;padding-top:40px;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                The email content should conclude with a signature block. It can appear with or without
+                                the signature image. Just make sure you leave plenty of white space. </p>
+                            <img src="https://placehold.co/100x40/1B9EDA/ffffff?text=Signature" width="100"
+                                alt="Signature" style="border:0;width:100px;max-width:100%;height:auto;" />
+                            <p
+                                style="margin:24px 0 0 0;font-family:Roboto,sans-serif;font-size:16px;line-height:22px;color:#444444;">
+                                Best Regards,<br>
+                                <strong style="color:#1B9EDA;">The Acme Team</strong>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Social icons -->
+                    <tr>
+                        <td bgcolor="#1B9EDA" align="right" style="padding:8px 12px;background-color:#1B9EDA;">
+                            <a href="#" style="color:#ffffff;text-decoration:none;"><i style="font-size:24px;"
+                                    class="fa">&#xf09a;</i></a>&nbsp;&nbsp;
+                            <a href="#" style="color:#ffffff;text-decoration:none;"><i style="font-size:24px;"
+                                    class="fa">&#xf16d;</i></a>&nbsp;&nbsp;
+                            <a href="#" style="color:#ffffff;text-decoration:none;"><i style="font-size:24px;"
+                                    class="fa">&#xf08c;</i></a>&nbsp;&nbsp;
+                            <a href="#" style="color:#ffffff;text-decoration:none;"><i style="font-size:24px;"
+                                    class="fa">&#xf099;</i></a>&nbsp;&nbsp;
+                            <a href="#" style="color:#ffffff;text-decoration:none;"><i style="font-size:24px;"
+                                    class="fa">&#xf167;</i></a>&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div style="max-width:600px;width:100%;margin:0 auto;background-color:#f8f8f8;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="padding:40px 30px;">
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                Legal disclaimers.</p>
+                            <p
+                                style="margin:0 0 12px 0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                The footer block normally contains all relevant legal disclaimers, and any appropriate
+                                <a href="#" style="color:#444444;text-decoration:underline;">text links</a>.
+                            </p>
+                            <p
+                                style="margin:0;font-family:Roboto,sans-serif;font-size:12px;line-height:18px;color:#444444;">
+                                The option to "Unsubscribe", and the relevant <a href="#"
+                                    style="color:#444444;text-decoration:underline;">Privacy policy</a> link should be
+                                included at a minimum.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

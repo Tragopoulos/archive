@@ -1,0 +1,544 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Subject }}</title>
+</head>
+
+<body style="background-color:#f9f9f9;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:#f9f9f9;padding:0;margin:0;">
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:20px 0;line-height:0;">&nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <img src="{{ .Components.theme.logo_url }}" width="140" height="auto"
+                                style="border:0;display:block;outline:none;text-decoration:none;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                {{ .Components.welcome.welcome_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:#555555;text-align:left;">
+                                {{ .Components.welcome.welcome_body }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.welcome.welcome_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.welcome.welcome_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:#525252;text-align:left;">
+                                {{ .Components.welcome.welcome_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto" src="{{ .Components.theme.logo_url }}"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                {{ .Components.confirm_email.confirm_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:#555555;text-align:center;">
+                                {{ .Components.confirm_email.confirm_body }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 40px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.confirm_email.confirm_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.confirm_email.confirm_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:26px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                {{ .Components.confirm_email.confirm_help_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;color:#555555;text-align:center;">
+                                {{ .Components.confirm_email.confirm_help_text }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto" src="{{ .Components.theme.logo_url }}"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:38px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                {{ .Components.reset_password.reset_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:18px;line-height:1;text-align:center;color:#555555;">
+                                {{ .Components.reset_password.reset_subheading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.reset_password.reset_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.reset_password.reset_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:20px;text-align:center;color:#7F8FA4;">
+                                {{ .Components.reset_password.reset_notice }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto" src="{{ .Components.theme.logo_url }}"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:22px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                {{ .Components.trial_expired.trial_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                {{ .Components.trial_expired.trial_body }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                {{ .Components.trial_expired.trial_benefits }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 10px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.trial_expired.trial_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.trial_expired.trial_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;color:#555555;">
+                                Or..
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 35px;">
+                                            <a href="{{ .Components.trial_expired.trial_secondary_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.trial_expired.trial_secondary_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                {{ .Components.trial_expired.trial_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto" src="{{ .Components.theme.logo_url }}"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:bold;line-height:22px;text-align:center;color:#525252;">
+                                {{ .Components.invoice.invoice_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;text-align:left;color:#525252;">
+                                {{ .Components.invoice.invoice_body }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                style="color:#000000;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;line-height:22px;table-layout:auto;">
+                                <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+                                    <th style="padding:0 15px 10px 0;">Item</th>
+                                    <th style="padding:0 15px;">Qt.</th>
+                                    <th style="padding:0 0 0 15px;" align="right">Price</th>
+                                </tr>
+                                {{ .Components.invoice.invoice_rows }}
+                                <tr style="border-bottom:2px solid #ecedee;text-align:left;">
+                                    <td style="padding:5px 15px 5px 0;font-weight:bold;">TOTAL</td>
+                                    <td style="padding:0 15px;"></td>
+                                    <td style="padding:0 0 0 15px;font-weight:bold;" align="right">{{ .Components.invoice.invoice_total }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:16px;text-align:left;color:#a2a2a2;">
+                                {{ .Components.invoice.invoice_disclaimer }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.invoice.invoice_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.invoice.invoice_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                {{ .Components.invoice.invoice_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:{{ .Components.theme.accent_color }} solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto" src="{{ .Components.theme.logo_url }}"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                {{ .Components.cancelled.cancelled_heading }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                {{ .Components.cancelled.cancelled_body }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.cancelled.cancelled_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.cancelled.cancelled_button }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                {{ .Components.cancelled.cancelled_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;color:#575757;text-align:center;">
+                                {{ .Components.footer.company_address }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;color:#575757;text-align:center;">
+                                <a href="{{ .Components.footer.unsubscribe_link }}" style="color:#575757;">Unsubscribe</a> from our emails
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

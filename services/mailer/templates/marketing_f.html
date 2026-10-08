@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Subject }}</title>
+    <style>
+        @media screen {
+            @font-face {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2) format('woff2');
+            }
+        }
+
+        @media only screen and (max-width:620px) {
+            .pc-sm-mw-100pc { max-width: 100% !important }
+        }
+    </style>
+</head>
+
+<body style="background-color:#f4f4f4;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;width:100%;margin:0;padding:0;line-height:1.5;">
+    <div style="background-color:#f4f4f4;padding:20px 10px;">
+        {{if .Components.content}}
+        <div style="max-width:620px;width:100%;margin:0 auto;box-shadow:0 2px 4px 0 rgba(0,0,0,0.1);">
+
+            <!-- Header -->
+            <div style="background-color:#1B1B1B;background-image:url('{{ .Components.content.header_background_image }}');background-size:cover;background-position:top center;padding:24px 30px 40px;">
+                <div style="font-size:0;">
+                    <div class="pc-sm-mw-100pc" style="display:inline-block;width:100%;max-width:220px;vertical-align:middle;">
+                        <div style="padding:10px;">
+                            <a href="{{ .Components.content.header_logo_link }}" style="text-decoration:none;">
+                                <img src="{{ .Components.content.header_logo_image }}" width="50" height="50" alt="" style="display:block;border:0;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="height:135px;"></div>
+                <div style="padding:0 10px;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:36px;font-weight:800;line-height:46px;letter-spacing:-0.7px;color:#393b40;">
+                    {{ .Components.content.header_title }}
+                </div>
+            </div>
+
+            <!-- Article -->
+            <div style="background-color:#ffffff;padding:30px 40px 40px;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#2d778e;margin-top:16px;margin-bottom:0;">
+                    <a href="{{ .Components.content.article_title_link }}" style="text-decoration:none;color:#2d778e;">{{ .Components.content.article_title }}</a>
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;margin-top:10px;">
+                    {{ .Components.content.article_body }}
+                </div>
+            </div>
+
+            <!-- Resource -->
+            <div style="background-color:#ffffff;padding:40px;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#ffffff;text-align:center;margin-bottom:7px;">
+                    {{ .Components.content.resource_title }}
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div style="background-color:#ffffff;padding:40px;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;margin-bottom:22px;">
+                    {{ .Components.content.quote_text }}
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="background-color:#ffffff;padding:40px;text-align:center;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:36px;font-weight:900;line-height:1.28;letter-spacing:-0.6px;color:#151515;margin-bottom:25px;">
+                    {{ .Components.content.cta_heading }}
+                </div>
+                <a href="{{ .Components.content.cta_button_link }}" style="line-height:1.5;text-decoration:none;word-break:break-word;font-weight:500;display:inline-block;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;color:#ffffff;background-color:#f18e8c;border-radius:8px;padding:13px 17px;">{{ .Components.content.cta_button_text }}</a>
+            </div>
+
+            <!-- Footer -->
+            <div style="background-color:#ffffff;padding:21px 20px 14px;">
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:24px;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:11px;">
+                    {{ .Components.content.footer_greeting }}
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;letter-spacing:-0.2px;color:#9B9B9B;margin-bottom:56px;">
+                    {{ .Components.content.footer_description }}
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:500;line-height:24px;">
+                    <a href="mailto:{{ .Components.content.footer_email }}" style="text-decoration:none;color:#f18e8c;">{{ .Components.content.footer_email }}</a>
+                </div>
+            </div>
+
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>

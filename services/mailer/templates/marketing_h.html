@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Subject }}</title>
+    <style>
+        @media screen {
+            @font-face {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jO.woff2) format('woff2');
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pc-floater-col {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;background-color:#FFFFFF;color:#000000;">
+
+    {{if .Components.content}}
+    <!-- SECTION 1: Blue header -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+        <tr>
+            <td align="center" style="background-color:#127DB3;padding:0;">
+                <table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+                    <tr>
+                        <td style="display:none;visibility:hidden;overflow:hidden;opacity:0;font-size:1px;line-height:1px;height:0;max-height:0;max-width:0;color:#127DB3;">
+                            {{ .Components.content.preheader }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:20px 6.25% 0;">
+                            <img src="{{ .Components.content.header_logo_image }}" width="100" height="30" alt="Logo" style="display:block;border:none;outline:none;">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:20px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:24px;font-weight:700;line-height:130%;color:#FFFFFF;">
+                            {{ .Components.content.header_heading }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:5px 6.25% 3px;font-family:'Fira Sans',sans-serif;font-size:18px;font-weight:300;line-height:150%;color:#FFFFFF;">
+                            {{ .Components.content.header_subheading }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:20px 0 0;">
+                            <img src="{{ .Components.content.header_hero_image }}" width="530" alt="Hero" style="display:block;border:none;outline:none;max-width:100%;">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:25px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#FFFFFF;">
+                            {{ .Components.content.header_body }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:25px 6.25% 35px;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td align="center" style="background-color:#0B5073;border-radius:4px;padding:12px 24px;">
+                                        <a href="{{ .Components.content.header_button_link }}" style="color:#FFFFFF;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:120%;text-decoration:none;">{{ .Components.content.header_button }}</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- SECTION 2: White grid -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+        <tr>
+            <td align="center" style="background-color:#FFFFFF;padding:0;">
+                <table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+                    <tr>
+                        <td align="center" style="padding:0 10px;">
+                            <div style="font-size:0;line-height:0;">
+                                <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                        <tr>
+                                            <td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                                                <a href="{{ .Components.content.grid_item1_link }}" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+                                                    <img src="{{ .Components.content.grid_item1_image }}" width="250" height="142" alt="" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+                                                    <b style="color:#0B5073;text-decoration:underline;">{{ .Components.content.grid_item1_title }}</b>
+                                                </a><br>
+                                                {{ .Components.content.grid_item1_text }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                        <tr>
+                                            <td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                                                <a href="{{ .Components.content.grid_item2_link }}" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+                                                    <img src="{{ .Components.content.grid_item2_image }}" width="250" height="142" alt="" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+                                                    <b style="color:#0B5073;text-decoration:underline;">{{ .Components.content.grid_item2_title }}</b>
+                                                </a><br>
+                                                {{ .Components.content.grid_item2_text }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:0 10px;">
+                            <div style="font-size:0;line-height:0;">
+                                <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                        <tr>
+                                            <td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                                                <a href="{{ .Components.content.grid_item3_link }}" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+                                                    <img src="{{ .Components.content.grid_item3_image }}" width="250" height="142" alt="" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+                                                    <b style="color:#0B5073;text-decoration:underline;">{{ .Components.content.grid_item3_title }}</b>
+                                                </a><br>
+                                                {{ .Components.content.grid_item3_text }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                        <tr>
+                                            <td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                                                <a href="{{ .Components.content.grid_item4_link }}" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+                                                    <img src="{{ .Components.content.grid_item4_image }}" width="250" height="142" alt="" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+                                                    <b style="color:#0B5073;text-decoration:underline;">{{ .Components.content.grid_item4_title }}</b>
+                                                </a><br>
+                                                {{ .Components.content.grid_item4_text }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:30px 6.25% 35px;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td align="center" style="background-color:#127DB3;border-radius:4px;padding:12px 24px;">
+                                        <a href="{{ .Components.content.grid_button_link }}" style="color:#FFFFFF;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:120%;text-decoration:none;">{{ .Components.content.grid_button }}</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- SECTION 3: Light gray footer -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+        <tr>
+            <td align="center" style="background-color:#F0F0F0;padding:0;">
+                <table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+                    <tr>
+                        <td align="center" style="padding:25px 6.25% 0;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                                <tr>
+                                    <td style="padding:0 10px;"><a href="{{ .Components.content.footer_facebook_link }}" style="text-decoration:none;"><img src="{{ .Components.content.footer_facebook_image }}" width="44" height="44" alt="Facebook" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                                    <td style="padding:0 10px;"><a href="{{ .Components.content.footer_twitter_link }}" style="text-decoration:none;"><img src="{{ .Components.content.footer_twitter_image }}" width="44" height="44" alt="Twitter" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                                    <td style="padding:0 10px;"><a href="{{ .Components.content.footer_google_link }}" style="text-decoration:none;"><img src="{{ .Components.content.footer_google_image }}" width="44" height="44" alt="Google Plus" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                                    <td style="padding:0 10px;"><a href="{{ .Components.content.footer_instagram_link }}" style="text-decoration:none;"><img src="{{ .Components.content.footer_instagram_image }}" width="44" height="44" alt="Instagram" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:20px 6.25%;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;color:#999999;">
+                            {{ .Components.content.footer_text }} <a href="{{ .Components.content.footer_settings_link }}" style="text-decoration:underline;color:#999999;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;">{{ .Components.content.footer_settings_label }}</a>
+                            {{ .Components.content.footer_text_suffix }}
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    {{end}}
+
+</body>
+</html>

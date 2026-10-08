@@ -1,0 +1,620 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lorem Ipsum Notification</title>
+</head>
+
+<body style="background-color:#f9f9f9;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:#f9f9f9;padding:0;margin:0;">
+
+        <!-- welcome -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:20px 0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- welcome -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg" width="140" height="auto"
+                                style="border:0;display:block;outline:none;text-decoration:none;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                Welcome to Lorem Ipsum
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:#555555;text-align:left;">
+                                Hello John!<br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                incididunt
+                                ut labore et dolore magna aliqua. Click the link below to login to your account:
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/login"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Login to Your Account
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:#525252;text-align:left;">
+                                Best regards,<br><br>
+                                Jane Doe<br>
+                                Lorem Ipsum Inc., CEO
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- welcome -->
+
+        <div style="height:30px;"></div>
+
+        <!-- confirm_email -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- confirm_email -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <img src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg" width="140" height="auto"
+                                style="border:0;display:block;outline:none;text-decoration:none;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                Please confirm your email
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:#555555;text-align:center;">
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Please validate your email to get started.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 40px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/confirm/abc123"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Confirm Your Email
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 0 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:#555555;text-align:center;">
+                                Or verify using this link:
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;color:#555555;text-align:center;">
+                                <a href="https://example.com/confirm/abc123"
+                                    style="color:#2F67F6;word-break:break-all;">https://example.com/confirm/abc123</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:26px;font-weight:bold;line-height:1;color:#555555;text-align:center;">
+                                Need Help?
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;color:#555555;text-align:center;">
+                                Please send any feedback or bug info to <a href="mailto:support@example.com"
+                                    style="color:#2F67F6;">support@example.com</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- confirm_email -->
+
+        <div style="height:30px;"></div>
+
+        <!-- reset_password -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- reset_password -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding: 30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto"
+                                                src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:38px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                Oops!
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:18px;line-height:1;text-align:center;color:#555555;">
+                                It seems that you've forgotten your password.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/reset-password/xyz789"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Reset Password
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:20px;text-align:center;color:#7F8FA4;">
+                                If you did not make this request, just ignore this email. Otherwise please click the
+                                button above to reset your password.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- reset_password -->
+
+        <div style="height:30px;"></div>
+
+        <!-- trial_expired -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- trial_expired -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding: 30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto"
+                                                src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:22px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                Uh-oh! Your free trial just ended!
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. To give you some time to enter your payment info we'll still collect all
+                                your data for the next 30 days.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                - Consectetur adipiscing elit<br>
+                                - Sed do eiusmod tempor incididunt<br>
+                                - Ut labore et dolore magna aliqua
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 10px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/billing"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Update Your Billing Info
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;color:#555555;">
+                                Or..
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 35px;">
+                                            <a href="https://example.com/extend-trial"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Get A Trial Extension
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                Best regards,<br><br>
+                                Jane Doe<br>
+                                Lorem Ipsum Inc., CEO
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- trial_expired -->
+
+        <div style="height:30px;"></div>
+
+        <!-- invoice -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- invoice -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding: 30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto"
+                                                src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:bold;line-height:22px;text-align:center;color:#525252;">
+                                Thank you for your order
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;text-align:left;color:#525252;">
+                                <p style="display:block;margin:13px 0;">Hi John,</p>
+                                <p style="display:block;margin:13px 0;">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nullam volutpat ut est ac dignissim. Donec pulvinar ligula metus,
+                                    sed imperdiet quam pretium at. Cras finibus hendrerit magna nec euismod.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                style="color:#000000;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;line-height:22px;table-layout:auto;">
+                                <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+                                    <th style="padding:0 15px 10px 0;">Item</th>
+                                    <th style="padding:0 15px;">Qt.</th>
+                                    <th style="padding:0 0 0 15px;" align="right">Price</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px 15px 5px 0;">Lorem ipsum dolor sit</td>
+                                    <td style="padding:0 15px;">1</td>
+                                    <td style="padding:0 0 0 15px;" align="right">$100.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 15px 5px 0;">Consectetur adipiscing</td>
+                                    <td style="padding:0 15px;">2</td>
+                                    <td style="padding:0 0 0 15px;" align="right">$25.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 15px 5px 0;">Shipping + Handling</td>
+                                    <td style="padding:0 15px;">1</td>
+                                    <td style="padding:0 0 0 15px;" align="right">$10.00</td>
+                                </tr>
+                                <tr style="border-bottom:2px solid #ecedee;text-align:left;">
+                                    <td style="padding:5px 15px 5px 0;font-weight:bold;">TOTAL</td>
+                                    <td style="padding:0 15px;"></td>
+                                    <td style="padding:0 0 0 15px;font-weight:bold;" align="right">$160.00</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:16px;text-align:left;color:#a2a2a2;">
+                                <p style="display:block;margin:13px 0;">Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/shipping-status"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Check Shipping Status
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                Best regards,<br><br>
+                                Jane Doe<br>
+                                Lorem Ipsum Inc., CEO
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- invoice -->
+
+        <div style="height:30px;"></div>
+
+        <!-- cancelled -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td style="border-bottom:#333957 solid 5px;padding:0;line-height:0;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- cancelled -->
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:#ffffff;border:1px solid #dddddd;border-top:0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding: 30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:140px;">
+                                            <img height="auto"
+                                                src="https://cdn.worldvectorlogo.com/logos/lorem-lorem.svg"
+                                                style="border:0;display:block;outline:none;text-decoration:none;width:100%;"
+                                                width="140" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 40px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;text-align:center;color:#555555;">
+                                Please help us improve
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. There could be
+                                various reasons for leaving and we hope you can help us learn and improve.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 50px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="#2F67F6"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="https://example.com/feedback"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                Share Your Feedback
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                                Best regards,<br><br>
+                                Jane Doe<br>
+                                Lorem Ipsum Inc., CEO
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- cancelled -->
+
+        <div style="height:30px;"></div>
+
+        <!-- footer -->
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;color:#575757;text-align:center;">
+                                Lorem Ipsum Inc., 42 Dolor Street, Amet City 10115, US
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 20px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;color:#575757;text-align:center;">
+                                <a href="https://example.com/unsubscribe" style="color:#575757;">Unsubscribe</a> from
+                                our emails
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- footer -->
+
+    </div>
+
+</body>
+
+</html>

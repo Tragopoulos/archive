@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    @media screen {
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:400;src:local('Fira Sans Regular'),local('FiraSans-Regular'),url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:400;src:local('Fira Sans Regular'),local('FiraSans-Regular'),url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvk4jLazX3dGTP.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116 }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:500;src:local('Fira Sans Medium'),local('FiraSans-Medium'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnZKveRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:500;src:local('Fira Sans Medium'),local('FiraSans-Medium'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnZKveQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116 }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:700;src:local('Fira Sans Bold'),local('FiraSans-Bold'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnLK3eRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:700;src:local('Fira Sans Bold'),local('FiraSans-Bold'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnLK3eQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116 }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:800;src:local('Fira Sans ExtraBold'),local('FiraSans-ExtraBold'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnMK7eRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:800;src:local('Fira Sans ExtraBold'),local('FiraSans-ExtraBold'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnMK7eQhf6Xl7Gl3LX.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116 }
+      @font-face { font-family:'Fira Sans';font-style:normal;font-weight:900;src:local('Fira Sans Heavy'),local('FiraSans-Heavy'),url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnFK_eRhf6Xl7Glw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+    }
+    @media only screen and (max-width:620px) {
+      .pc-features-row-col { max-width:50% !important }
+      .pc-footer-row-col { max-width:100% !important }
+    }
+    @media only screen and (max-width:525px) {
+      .pc-features-row-col { max-width:100% !important }
+    }
+  </style>
+</head>
+<body style="background-color:#f4f4f4;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;width:100%;margin:0;padding:0;line-height:1.5;">
+  <div style="background-color:#f4f4f4;">
+    <div style="max-width:620px;width:100%;margin:0 auto;box-shadow:0 2px 4px 0 rgba(0,0,0,0.1);">
+
+      <!-- Header -->
+      <div style="background-color:#1B1B1B;background-image:url('https://picsum.photos/seed/techbg/620/550');background-size:cover;background-position:top center;padding:29px 26px 26px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+          <td style="vertical-align:top;padding:10px;" width="150">
+            <a href="http://example.com" style="text-decoration:none;">
+              <img src="https://placehold.co/130x22/1B1B1B/ffffff?text=LOGO" width="130" height="22" alt="" style="display:block;border:0;">
+            </a>
+          </td>
+          <td style="vertical-align:middle;text-align:right;padding:10px;">
+            <a href="http://example.com" style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:500;color:#ffffff;text-decoration:none;margin-left:20px;">Features</a>
+            <a href="http://example.com" style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:500;color:#ffffff;text-decoration:none;margin-left:20px;">Pricing</a>
+            <a href="http://example.com" style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:13px;font-weight:500;color:#ffffff;text-decoration:none;margin-left:20px;">Blog</a>
+          </td>
+        </tr></tbody></table>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:20px;"><tbody><tr>
+          <td style="vertical-align:top;padding:20px 14px;">
+            <img src="https://placehold.co/60x60/ffffff/1B1B1B?text=App" width="60" height="60" alt="" style="display:block;border:0;margin-bottom:16px;">
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:36px;font-weight:900;line-height:1.28;letter-spacing:-0.6px;color:#ffffff;margin-bottom:10px;">Your best app <br>is here.</div>
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:rgba(255,255,255,0.7);margin-bottom:24px;">Co-ordinate campaigns and product <br>launches with ease.</div>
+            <table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+              <td style="padding-right:8px;">
+                <a href="http://example.com" style="text-decoration:none;">
+                  <img src="https://placehold.co/127x40/ffffff/1B1B1B?text=App+Store" width="127" height="40" alt="App Store" style="display:block;border:0;">
+                </a>
+              </td>
+              <td>
+                <a href="http://example.com" style="text-decoration:none;">
+                  <img src="https://placehold.co/136x40/ffffff/1B1B1B?text=Google+Play" width="136" height="40" alt="Google Play" style="display:block;border:0;">
+                </a>
+              </td>
+            </tr></tbody></table>
+          </td>
+          <td style="vertical-align:top;padding:20px 14px;text-align:right;" width="214">
+            <img src="https://placehold.co/186x369/333333/ffffff?text=Phone" width="186" height="369" alt="" style="display:block;border:0;max-width:100%;height:auto;">
+          </td>
+        </tr></tbody></table>
+      </div>
+
+      <!-- Features -->
+      <div style="background-color:#ffffff;padding:40px 40px 20px;">
+        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#151515;margin-bottom:10px;">Features.</div>
+        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;margin-bottom:20px;">Co-ordinate campaigns and product launches, <br>with improved overall communication.</div>
+        <div style="font-size:0;">
+          <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+            <img src="https://placehold.co/48x48/1B1B1B/ffffff?text=1" width="48" height="48" alt="" style="display:block;border:0;margin-bottom:10px;">
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:6px;">Responsive</div>
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.43;letter-spacing:-0.2px;color:#9B9B9B;">Kogi Cosby sweater ethical squid irony disrupt, organic tote.</div>
+          </div>
+          <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+            <img src="https://placehold.co/48x48/1B1B1B/ffffff?text=2" width="48" height="48" alt="" style="display:block;border:0;margin-bottom:10px;">
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:6px;">Clean code</div>
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.43;letter-spacing:-0.2px;color:#9B9B9B;">Kogi Cosby sweater ethical squid irony disrupt, organic tote.</div>
+          </div>
+          <div class="pc-features-row-col" style="display:inline-block;width:100%;max-width:186px;vertical-align:top;padding:20px;">
+            <img src="https://placehold.co/48x48/1B1B1B/ffffff?text=3" width="48" height="48" alt="" style="display:block;border:0;margin-bottom:10px;">
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:6px;">Clean design</div>
+            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.43;letter-spacing:-0.2px;color:#9B9B9B;">Kogi Cosby sweater ethical squid irony disrupt, organic tote.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clients -->
+      <div style="background-color:#ffffff;padding:40px 20px 20px;">
+        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#151515;text-align:center;margin-bottom:6px;">Our clients.</div>
+        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#9B9B9B;text-align:center;margin-bottom:20px;">Co-ordinate campaigns and product launches.</div>
+        <div style="text-align:center;font-size:0;">
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/67x20/cccccc/333333?text=Client" width="67" height="19" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/86x29/cccccc/333333?text=Client" width="86" height="29" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/32x38/cccccc/333333?text=C" width="32" height="38" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/93x20/cccccc/333333?text=Client" width="93" height="20" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+        </div>
+        <div style="text-align:center;font-size:0;">
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/94x18/cccccc/333333?text=Client" width="94" height="18" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/64x40/cccccc/333333?text=Client" width="64" height="40" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/39x46/cccccc/333333?text=C" width="39" height="46" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+          <div style="display:inline-block;width:100%;max-width:140px;vertical-align:middle;padding:20px;">
+            <img src="https://placehold.co/100x22/cccccc/333333?text=Client" width="100" height="22" alt="" style="display:block;border:0;margin:0 auto;max-width:100%;height:auto;">
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="background-color:#1B1B1B;background-image:url('https://picsum.photos/seed/ctabg/620/364');background-size:cover;background-position:center;padding:40px 30px 32px;text-align:center;">
+        <img src="https://placehold.co/100x100/ffffff/1B1B1B?text=App" width="100" height="100" alt="" style="display:block;border:0;margin:0 auto 17px;">
+        <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:36px;font-weight:900;line-height:1.28;letter-spacing:-0.6px;color:#ffffff;margin-bottom:7px;">App is available for <br>iOS and Android.</div>
+        <div style="font-size:0;text-align:center;padding-top:16px;">
+          <div style="display:inline-block;vertical-align:top;padding:8px;">
+            <a href="http://example.com" style="text-decoration:none;">
+              <img src="https://placehold.co/127x52/ffffff/1B1B1B?text=App+Store" width="127" height="52" alt="App Store" style="display:block;border:0;max-width:100%;">
+            </a>
+          </div>
+          <div style="display:inline-block;vertical-align:top;padding:8px;">
+            <a href="http://example.com" style="text-decoration:none;">
+              <img src="https://placehold.co/136x52/ffffff/1B1B1B?text=Google+Play" width="136" height="52" alt="Google Play" style="display:block;border:0;max-width:100%;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div style="background-color:#ffffff;padding:21px 20px 14px;">
+        <div style="font-size:0;">
+          <div class="pc-footer-row-col" style="display:inline-block;width:100%;max-width:280px;vertical-align:top;">
+            <div style="padding:20px;">
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:11px;">Follow Us.</div>
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.43;letter-spacing:-0.2px;color:#9B9B9B;margin-bottom:57px;">We are always looking for new exciting projects and collaborations. Feel free to contact us.</div>
+              <div>
+                <a href="http://example.com" style="text-decoration:none;margin-right:10px;">
+                  <img src="https://placehold.co/20x20/cccccc/333333?text=f" width="20" height="20" alt="Facebook" style="display:inline-block;border:0;vertical-align:middle;">
+                </a>
+                <a href="http://example.com" style="text-decoration:none;margin-right:10px;">
+                  <img src="https://placehold.co/21x18/cccccc/333333?text=t" width="21" height="18" alt="Twitter" style="display:inline-block;border:0;vertical-align:middle;">
+                </a>
+                <a href="http://example.com" style="text-decoration:none;margin-right:10px;">
+                  <img src="https://placehold.co/21x20/cccccc/333333?text=in" width="21" height="20" alt="Instagram" style="display:inline-block;border:0;vertical-align:middle;">
+                </a>
+                <a href="http://example.com" style="text-decoration:none;">
+                  <img src="https://placehold.co/20x20/cccccc/333333?text=p" width="20" height="20" alt="Pinterest" style="display:inline-block;border:0;vertical-align:middle;">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pc-footer-row-col" style="display:inline-block;width:100%;max-width:280px;vertical-align:top;">
+            <div style="padding:20px;">
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#1B1B1B;margin-bottom:11px;">Contact us.</div>
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.43;letter-spacing:-0.2px;color:#9B9B9B;margin-bottom:46px;">
+                <a style="text-decoration:none;cursor:text;color:#9B9B9B;">King street, 2901 Marmara road, Newyork, WA 98122-1090</a>
+              </div>
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;margin-bottom:9px;">
+                <a href="tel:749-977-3440" style="text-decoration:none;color:#1B1B1B;">749-977-3440</a>
+              </div>
+              <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:500;line-height:1.7;">
+                <a href="mailto:bo.grady@nathen.biz" style="text-decoration:none;color:#1595E7;">bo.grady@nathen.biz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Subject }}</title>
+  <style>
+    @media screen {
+      @font-face {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jL.woff2) format('woff2');
+      }
+    }
+  </style>
+</head>
+
+<body style="margin:0;padding:0;background-color:#F0F0F0;color:#000000;">
+
+  {{if .Components.content}}
+  <!-- Logo bar -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td align="center" style="background-color:#F0F0F0;padding:0;">
+        <table width="560" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;max-width:560px;">
+          <tr>
+            <td style="display:none;visibility:hidden;overflow:hidden;opacity:0;font-size:1px;line-height:1px;height:0;max-height:0;max-width:0;color:#F0F0F0;">
+              {{ .Components.content.preheader }}
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:20px 6.25%;">
+              <img src="{{ .Components.content.logo_image }}" width="100" height="30" alt="Logo" style="display:block;border:none;outline:none;">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- White card container -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td align="center" style="background-color:#F0F0F0;padding:0 0 20px;">
+        <table width="560" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:560px;background-color:#FFFFFF;border-radius:8px;">
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding:25px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:24px;font-weight:700;line-height:130%;color:#000000;">
+              {{ .Components.content.heading }}
+            </td>
+          </tr>
+
+          <!-- Subheader -->
+          <tr>
+            <td align="center" style="padding:5px 6.25% 3px;font-family:'Fira Sans',sans-serif;font-size:18px;font-weight:300;line-height:150%;color:#000000;">
+              {{ .Components.content.subheading }}
+            </td>
+          </tr>
+
+          <!-- Hero image -->
+          <tr>
+            <td align="center" style="padding:20px 0 0;">
+              <img src="{{ .Components.content.hero_image }}" width="560" alt="Hero" style="display:block;border:none;outline:none;max-width:100%;border-radius:0;">
+            </td>
+          </tr>
+
+          <!-- Paragraph -->
+          <tr>
+            <td align="center" style="padding:25px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+              {{ .Components.content.body }}
+            </td>
+          </tr>
+
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding:25px 6.25% 5px;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                  <td align="center" style="background-color:#E9703E;border-radius:4px;padding:12px 24px;">
+                    <a href="{{ .Components.content.button_link }}" style="color:#FFFFFF;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:120%;text-decoration:none;">{{ .Components.content.button_text }}</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding:25px 6.25% 0;">
+              <hr style="border:none;border-top:1px solid #E0E0E0;margin:0;padding:0;">
+            </td>
+          </tr>
+
+          <!-- List items -->
+          <tr>
+            <td style="padding:0 6.25%;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;">
+
+                <!-- Item 1 -->
+                <tr>
+                  <td valign="top" style="padding:30px 20px 0 0;width:50px;">
+                    <img src="{{ .Components.content.item1_icon }}" width="50" height="50" alt="H" style="display:block;border:none;outline:none;">
+                  </td>
+                  <td valign="top" style="padding:25px 0 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                    <b style="color:#333333;">{{ .Components.content.item1_title }}</b><br>
+                    {{ .Components.content.item1_text }}
+                  </td>
+                </tr>
+
+                <!-- Item 2 -->
+                <tr>
+                  <td valign="top" style="padding:30px 20px 0 0;width:50px;">
+                    <img src="{{ .Components.content.item2_icon }}" width="50" height="50" alt="D" style="display:block;border:none;outline:none;">
+                  </td>
+                  <td valign="top" style="padding:25px 0 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+                    <b style="color:#333333;">{{ .Components.content.item2_title }}</b><br>
+                    {{ .Components.content.item2_text }}
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding:25px 6.25% 0;">
+              <hr style="border:none;border-top:1px solid #E0E0E0;margin:0;padding:0;">
+            </td>
+          </tr>
+
+          <!-- Contact -->
+          <tr>
+            <td align="center" style="padding:20px 6.25% 25px;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+              Have a&nbsp;question? <a href="mailto:{{ .Components.content.contact_email }}" style="color:#127DB3;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;">{{ .Components.content.contact_email }}</a>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Footer wrapper -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    <tr>
+      <td align="center" style="background-color:#F0F0F0;padding:0;">
+        <table width="560" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;max-width:560px;">
+
+          <!-- Social icons -->
+          <tr>
+            <td align="center" style="padding:25px 6.25% 0;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                  <td style="padding:0 10px;"><a href="{{ .Components.content.social_facebook_link }}" style="text-decoration:none;"><img src="{{ .Components.content.social_facebook_image }}" width="44" height="44" alt="Facebook" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                  <td style="padding:0 10px;"><a href="{{ .Components.content.social_twitter_link }}" style="text-decoration:none;"><img src="{{ .Components.content.social_twitter_image }}" width="44" height="44" alt="Twitter" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                  <td style="padding:0 10px;"><a href="{{ .Components.content.social_google_link }}" style="text-decoration:none;"><img src="{{ .Components.content.social_google_image }}" width="44" height="44" alt="Google Plus" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                  <td style="padding:0 10px;"><a href="{{ .Components.content.social_instagram_link }}" style="text-decoration:none;"><img src="{{ .Components.content.social_instagram_image }}" width="44" height="44" alt="Instagram" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer text -->
+          <tr>
+            <td align="center" style="padding:20px 6.25%;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;color:#999999;">
+              {{ .Components.content.footer_text }} <a href="{{ .Components.content.footer_settings_link }}" style="text-decoration:underline;color:#999999;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;">subscription settings</a> anytime.
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+  {{end}}
+
+</body>
+</html>

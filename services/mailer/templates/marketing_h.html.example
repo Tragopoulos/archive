@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+@media screen {
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jO.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jL.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 500; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 500; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveQhf6.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 700; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eSxf6TF0.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 700; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLK3eQhf6.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 800; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnMK7eSxf6TF0.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 800; src: url(https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnMK7eQhf6.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+}
+@media (max-width: 600px) {
+  .pc-floater-col { display: block !important; width: 100% !important; max-width: 100% !important; }
+}
+</style>
+</head>
+<body style="margin:0;padding:0;background-color:#FFFFFF;color:#000000;">
+
+<!-- SECTION 1: Blue header -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+<tr><td align="center" style="background-color:#127DB3;padding:0;">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+  <!-- Hidden preheader -->
+  <tr><td style="display:none;visibility:hidden;overflow:hidden;opacity:0;font-size:1px;line-height:1px;height:0;max-height:0;max-width:0;color:#127DB3;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </td></tr>
+
+  <!-- Logo -->
+  <tr><td align="center" style="padding:20px 6.25% 0;">
+    <img src="https://placehold.co/100x30/127DB3/ffffff?text=LOGO" width="100" height="30" alt="Logo" style="display:block;border:none;outline:none;">
+  </td></tr>
+
+  <!-- Header -->
+  <tr><td align="center" style="padding:20px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:24px;font-weight:700;line-height:130%;color:#FFFFFF;">
+    Explore our latest features
+  </td></tr>
+
+  <!-- Subheader -->
+  <tr><td align="center" style="padding:5px 6.25% 3px;font-family:'Fira Sans',sans-serif;font-size:18px;font-weight:300;line-height:150%;color:#FFFFFF;">
+    Available for download now
+  </td></tr>
+
+  <!-- Hero image -->
+  <tr><td align="center" style="padding:20px 0 0;">
+    <img src="https://picsum.photos/seed/emailhero/530/300" width="530" alt="Hero" style="display:block;border:none;outline:none;max-width:100%;">
+  </td></tr>
+
+  <!-- Paragraph -->
+  <tr><td align="center" style="padding:25px 6.25% 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#FFFFFF;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+  </td></tr>
+
+  <!-- Button -->
+  <tr><td align="center" style="padding:25px 6.25% 35px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <tr><td align="center" style="background-color:#0B5073;border-radius:4px;padding:12px 24px;">
+        <a href="#" style="color:#FFFFFF;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:120%;text-decoration:none;">Get started</a>
+      </td></tr>
+    </table>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+
+<!-- SECTION 2: White grid -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+<tr><td align="center" style="background-color:#FFFFFF;padding:0;">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+  <!-- Grid row 1 -->
+  <tr><td align="center" style="padding:0 10px;">
+    <div style="font-size:0;line-height:0;">
+      <!-- Col 1 -->
+      <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+          <tr><td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+            <a href="#" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+              <img src="https://picsum.photos/seed/general1/250/142" width="250" height="142" alt="Feature overview" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+              <b style="color:#0B5073;text-decoration:underline;">Feature overview</b>
+            </a><br>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          </td></tr>
+        </table>
+      </div>
+      <!-- Col 2 -->
+      <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+          <tr><td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+            <a href="#" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+              <img src="https://picsum.photos/seed/transact1/250/142" width="250" height="142" alt="Account notifications" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+              <b style="color:#0B5073;text-decoration:underline;">Account notifications</b>
+            </a><br>
+            Sed do eiusmod tempor incididunt ut labore et dolore.
+          </td></tr>
+        </table>
+      </div>
+    </div>
+  </td></tr>
+
+  <!-- Grid row 2 -->
+  <tr><td align="center" style="padding:0 10px;">
+    <div style="font-size:0;line-height:0;">
+      <!-- Col 1 -->
+      <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+          <tr><td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+            <a href="#" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+              <img src="https://picsum.photos/seed/promo1/250/142" width="250" height="142" alt="Product announcements" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+              <b style="color:#0B5073;text-decoration:underline;">Product announcements</b>
+            </a><br>
+            Ut enim ad minim veniam, quis nostrud exercitation.
+          </td></tr>
+        </table>
+      </div>
+      <!-- Col 2 -->
+      <div class="pc-floater-col" style="display:inline-block;vertical-align:top;width:50%;max-width:280px;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+          <tr><td align="center" style="padding:30px 15px 0;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:160%;color:#000000;">
+            <a href="#" style="text-decoration:none;font-size:17px;line-height:160%;color:#000000;">
+              <img src="https://picsum.photos/seed/explore1/250/142" width="250" height="142" alt="Weekly digest" style="display:block;border:none;outline:none;margin-bottom:8px;max-width:100%;">
+              <b style="color:#0B5073;text-decoration:underline;">Weekly digest</b>
+            </a><br>
+            Duis aute irure dolor in reprehenderit in voluptate.
+          </td></tr>
+        </table>
+      </div>
+    </div>
+  </td></tr>
+
+  <!-- Button -->
+  <tr><td align="center" style="padding:30px 6.25% 35px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <tr><td align="center" style="background-color:#127DB3;border-radius:4px;padding:12px 24px;">
+        <a href="#" style="color:#FFFFFF;font-family:'Fira Sans',sans-serif;font-size:17px;font-weight:400;line-height:120%;text-decoration:none;">Learn more</a>
+      </td></tr>
+    </table>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+
+<!-- SECTION 3: Light gray footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+<tr><td align="center" style="background-color:#F0F0F0;padding:0;">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:600px;">
+
+  <!-- Social icons -->
+  <tr><td align="center" style="padding:25px 6.25% 0;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+      <tr>
+        <td style="padding:0 10px;"><a href="#" style="text-decoration:none;"><img src="https://placehold.co/44x44/3b5998/ffffff?text=f" width="44" height="44" alt="Facebook" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+        <td style="padding:0 10px;"><a href="#" style="text-decoration:none;"><img src="https://placehold.co/44x44/1da1f2/ffffff?text=t" width="44" height="44" alt="Twitter" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+        <td style="padding:0 10px;"><a href="#" style="text-decoration:none;"><img src="https://placehold.co/44x44/dd4b39/ffffff?text=g" width="44" height="44" alt="Google Plus" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+        <td style="padding:0 10px;"><a href="#" style="text-decoration:none;"><img src="https://placehold.co/44x44/c13584/ffffff?text=in" width="44" height="44" alt="Instagram" style="display:inline-block;border:none;border-radius:50%;"></a></td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- Footer text -->
+  <tr><td align="center" style="padding:20px 6.25%;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;color:#999999;">
+    You are receiving this because you subscribed to our updates. You could change your <a href="#" style="text-decoration:underline;color:#999999;font-family:'Fira Sans',sans-serif;font-size:13px;font-weight:400;line-height:150%;">subscription settings</a> anytime.
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+
+</body>
+</html>

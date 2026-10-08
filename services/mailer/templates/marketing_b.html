@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+    <title>{{ .Subject }}</title>
+    <style type="text/css">
+        @media (max-width: 700px) {
+            .col {
+                max-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:#e1cfc3;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:#e1cfc3;padding:0;margin:0;">
+        {{if .Components.content}}
+        <div style="max-width:680px;width:100%;margin:0 auto;background-color:#f5f2e3;">
+
+            <div style="background-color:#ffffff;padding:5px 0 0 0;">
+
+                <div style="text-align:center;padding:0 0 20px 0;">
+                    <img src="{{ .Components.content.logo_image }}" alt="your-logo" width="136"
+                        style="border:0;width:136px;max-width:100%;height:auto;display:inline-block;" />
+                </div>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="center" style="padding:15px 0;font-size:0;">
+                                <p
+                                    style="margin:0;font-family:'Droid Serif',Georgia,serif;font-size:14px;line-height:1.5;color:#292f37;">
+                                    {{ .Components.content.hero_description }}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background-color:#ffffff;text-align:center;padding:25px 10px;">
+                <h1
+                    style="margin:0;font-family:'Droid Serif',Georgia,serif;font-size:46px;font-weight:bold;letter-spacing:5px;line-height:1.2;color:#292f37;text-align:center;">
+                    <strong>{{ .Components.content.hero_subheading }}</strong>
+                </h1>
+                <p
+                    style="margin:0;font-family:'Droid Serif',Georgia,serif;font-size:20px;line-height:1.2;color:#292f37;text-align:center;margin:0 0 10px 0;">
+                    {{ .Components.content.promo_message }}</p>
+            </div>
+
+            {{if .Components.content.footer_logo_image}}
+            <div style="background-color:#ffffff;padding:15px;">
+                <div style="border-top:1px solid #BBBBBB;"></div>
+            </div>
+
+            <div style="background-color:#ffffff;text-align:center;font-size:0;padding:10px 0 25px 0;">
+
+                <div class="col"
+                    style="width:340px;max-width:100%;display:inline-block;vertical-align:top;font-size:12px;">
+                    <div style="padding:10px;">
+                        <div style="text-align:center;padding:0 10px 10px 10px;">
+                            <img src="{{ .Components.content.footer_logo_image }}" alt="Logo-dark" width="102"
+                                style="border:0;width:102px;max-width:100%;height:auto;display:inline-block;" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {{end}}
+
+        </div>
+        {{end}}
+    </div>
+
+</body>
+
+</html>

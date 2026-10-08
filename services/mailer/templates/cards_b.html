@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body
+    style="background-color:{{ .Components.theme.bg_color }};margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+    <div style="background-color:{{ .Components.theme.bg_color }};padding:0;margin:0;">
+
+        <div style="height:30px;"></div>
+
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:{{ .Components.theme.card_bg_color }};border:1px solid {{ .Components.theme.card_border_color }};">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="left" style="padding:30px 25px 10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.action.action_body_1 }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.action.action_body_2 }}
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:30px 25px 40px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="{{ .Components.theme.button_color }}"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.action.action_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.action.action_button_text }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.action.action_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:{{ .Components.theme.card_bg_color }};border:1px solid {{ .Components.theme.card_border_color }};">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" bgcolor="{{ .Components.alert.alert_color }}"
+                            style="padding:20px 25px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:500;color:#ffffff;">
+                            {{ .Components.alert.alert_text }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left" style="padding:20px 25px 10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.alert.alert_body_1 }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.alert.alert_body_2 }}
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:30px 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" bgcolor="{{ .Components.theme.button_color }}"
+                                            style="border-radius:3px;padding:15px 25px;">
+                                            <a href="{{ .Components.alert.alert_button_link }}"
+                                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:#ffffff;text-decoration:none;display:block;">
+                                                {{ .Components.alert.alert_button_text }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:{{ .Components.theme.text_color }};text-align:left;">
+                                {{ .Components.alert.alert_signature }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div
+            style="max-width:600px;width:100%;margin:0 auto;background-color:{{ .Components.theme.card_bg_color }};border:1px solid {{ .Components.theme.card_border_color }};">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:40px 25px 10px 25px;">
+                            <h1
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:32px;font-weight:500;line-height:1.2;color:{{ .Components.theme.heading_color }};text-align:center;margin:0;">
+                                {{ .Components.billing.billing_amount_heading }}
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:10px 25px 30px 25px;">
+                            <h2
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:400;line-height:1.2;color:{{ .Components.theme.heading_color }};text-align:center;margin:0;">
+                                {{ .Components.billing.billing_subheading }}
+                            </h2>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:0 25px 20px 25px;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="width:80%;text-align:left;">
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:{{ .Components.theme.text_color }};padding:5px 0;">
+                                            {{ .Components.billing.billing_invoice_info }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:10px 0 0 0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tbody>
+                                                    {{ .Components.billing.billing_invoice_rows }}
+                                                    <tr>
+                                                        <td
+                                                            style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:700;color:{{ .Components.theme.heading_color }};border-top:2px solid {{ .Components.theme.total_border_color }};border-bottom:2px solid {{ .Components.theme.total_border_color }};padding:5px 0;">
+                                                            Total
+                                                        </td>
+                                                        <td align="right"
+                                                            style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:700;color:{{ .Components.theme.heading_color }};border-top:2px solid {{ .Components.theme.total_border_color }};border-bottom:2px solid {{ .Components.theme.total_border_color }};padding:5px 0;">
+                                                            {{ .Components.billing.billing_invoice_total }}
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;color:{{ .Components.theme.link_color }};text-align:center;">
+                                <a href="{{ .Components.billing.billing_browser_link }}"
+                                    style="color:{{ .Components.theme.link_color }};text-decoration:underline;">View in browser</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding:10px 25px 30px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;color:{{ .Components.theme.text_color }};text-align:center;">
+                                {{ .Components.billing.company_address }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div style="max-width:600px;width:100%;margin:0 auto;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:20px 25px 10px 25px;">
+                            <div
+                                style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;color:#999;text-align:center;">
+                                {{ .Components.footer.footer }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

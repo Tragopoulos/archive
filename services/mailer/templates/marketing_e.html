@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Subject }}</title>
+    <style>
+        @media screen {
+            @font-face {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2) format('woff2');
+            }
+        }
+
+        @media only screen and (max-width:620px) {
+            .pc-posts-row-col,
+            .pc-post-col,
+            .pc-footer-row-col {
+                max-width: 100% !important
+            }
+        }
+
+        @media only screen and (max-width:525px) {
+            .pc-posts-row-col {
+                max-width: 100% !important
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:#f4f4f4;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:16px;width:100%;margin:0;padding:0;line-height:1.5;">
+    <div style="background-color:#f4f4f4;padding:20px 10px;">
+        {{if .Components.content}}
+        <div style="max-width:620px;width:100%;margin:0 auto;box-shadow:0 2px 4px 0 rgba(0,0,0,0.1);">
+
+            <!-- Menu: social icons | logo | spacer -->
+            <div style="background-color:#ffffff;padding:29px 40px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align:middle;" width="195">
+                                <div style="padding:13px 0 10px;font-size:10px;line-height:1.3;">
+                                    <a href="{{ .Components.content.nav_facebook_link }}" style="text-decoration:none;margin-right:8px;">
+                                        <img src="{{ .Components.content.nav_facebook_image }}" width="15" height="15" alt="Facebook" style="display:inline-block;border:0;vertical-align:middle;">
+                                    </a>
+                                    <a href="{{ .Components.content.nav_twitter_link }}" style="text-decoration:none;margin-right:8px;">
+                                        <img src="{{ .Components.content.nav_twitter_image }}" width="16" height="14" alt="Twitter" style="display:inline-block;border:0;vertical-align:middle;">
+                                    </a>
+                                    <a href="{{ .Components.content.nav_google_link }}" style="text-decoration:none;margin-right:8px;">
+                                        <img src="{{ .Components.content.nav_google_image }}" width="22" height="15" alt="Google+" style="display:inline-block;border:0;vertical-align:middle;">
+                                    </a>
+                                    <a href="{{ .Components.content.nav_instagram_link }}" style="text-decoration:none;">
+                                        <img src="{{ .Components.content.nav_instagram_image }}" width="16" height="15" alt="Instagram" style="display:inline-block;border:0;vertical-align:middle;">
+                                    </a>
+                                </div>
+                            </td>
+                            <td style="vertical-align:middle;text-align:center;" width="130">
+                                <div style="padding:10px 0;">
+                                    <a href="{{ .Components.content.nav_logo_link }}" style="text-decoration:none;">
+                                        <img src="{{ .Components.content.nav_logo_image }}" width="130" height="22" alt="" style="display:block;border:0;margin:0 auto;">
+                                    </a>
+                                </div>
+                            </td>
+                            <td width="195">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Hero / Editor pick's -->
+            <div style="background-color:#1B1B1B;background-image:url('{{ .Components.content.hero_background_image }}');background-size:cover;background-position:top center;padding:30px 40px 40px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="100">&nbsp;</td>
+                            <td style="text-align:center;padding:10px 0;font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#ffffff;">
+                                {{ .Components.content.hero_heading }}
+                            </td>
+                            <td style="text-align:right;padding:13px 0 10px;" width="100">
+                                <a href="{{ .Components.content.hero_seeall_link }}" style="text-decoration:none;cursor:pointer;white-space:nowrap;font-family:'Fira Sans',Helvetica,Arial,sans-serif;display:inline-block;background-color:#ffffff;border-radius:14px;font-size:14px;font-weight:500;color:#575757;padding:7px 10px 7px 13px;line-height:1;">{{ .Components.content.hero_seeall_text }}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="height:108px;"></div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:500;line-height:1.43;color:#40BE65;text-align:center;margin-bottom:8px;">
+                    <a style="text-decoration:none;cursor:text;color:#40BE65;">{{ .Components.content.hero_date }}</a>
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;line-height:1.42;letter-spacing:-0.4px;color:#ffffff;text-align:center;margin-bottom:10px;">
+                    <a href="{{ .Components.content.hero_title_link }}" style="text-decoration:none;color:#ffffff;">{{ .Components.content.hero_title }}</a>
+                </div>
+                <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.56;letter-spacing:-0.2px;color:#D8D8D8;text-align:center;">
+                    <a href="{{ .Components.content.hero_subtitle_link }}" style="text-decoration:none;color:#D8D8D8;">{{ .Components.content.hero_subtitle }}</a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="background-color:#1B1B1B;padding:21px 20px 14px;">
+                <div style="font-size:0;">
+                    <div class="pc-footer-row-col" style="display:inline-block;width:100%;max-width:280px;vertical-align:top;">
+                        <div style="padding:20px;">
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#ffffff;margin-bottom:11px;">
+                                {{ .Components.content.footer_followus_heading }}
+                            </div>
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.43;letter-spacing:-0.2px;color:#D8D8D8;margin-bottom:57px;">
+                                {{ .Components.content.footer_followus_text }}
+                            </div>
+                            <div>
+                                <a href="{{ .Components.content.footer_facebook_link }}" style="text-decoration:none;margin-right:10px;">
+                                    <img src="{{ .Components.content.footer_facebook_image }}" width="20" height="20" alt="Facebook" style="display:inline-block;border:0;vertical-align:middle;">
+                                </a>
+                                <a href="{{ .Components.content.footer_twitter_link }}" style="text-decoration:none;margin-right:10px;">
+                                    <img src="{{ .Components.content.footer_twitter_image }}" width="21" height="18" alt="Twitter" style="display:inline-block;border:0;vertical-align:middle;">
+                                </a>
+                                <a href="{{ .Components.content.footer_instagram_link }}" style="text-decoration:none;margin-right:10px;">
+                                    <img src="{{ .Components.content.footer_instagram_image }}" width="21" height="20" alt="Instagram" style="display:inline-block;border:0;vertical-align:middle;">
+                                </a>
+                                <a href="{{ .Components.content.footer_pinterest_link }}" style="text-decoration:none;">
+                                    <img src="{{ .Components.content.footer_pinterest_image }}" width="20" height="20" alt="Pinterest" style="display:inline-block;border:0;vertical-align:middle;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc-footer-row-col" style="display:inline-block;width:100%;max-width:280px;vertical-align:top;">
+                        <div style="padding:20px;">
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;color:#ffffff;margin-bottom:11px;">
+                                {{ .Components.content.footer_contact_heading }}
+                            </div>
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.43;letter-spacing:-0.2px;color:#D8D8D8;margin-bottom:46px;">
+                                <a style="text-decoration:none;cursor:text;color:#D8D8D8;">{{ .Components.content.footer_address }}</a>
+                            </div>
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.33;letter-spacing:-0.2px;margin-bottom:9px;">
+                                <a href="tel:{{ .Components.content.footer_phone }}" style="text-decoration:none;color:#ffffff;">{{ .Components.content.footer_phone }}</a>
+                            </div>
+                            <div style="font-family:'Fira Sans',Helvetica,Arial,sans-serif;font-size:14px;font-weight:500;line-height:1.7;">
+                                <a href="mailto:{{ .Components.content.footer_email }}" style="text-decoration:none;color:#1595E7;">{{ .Components.content.footer_email }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
